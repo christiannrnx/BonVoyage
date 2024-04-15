@@ -15,6 +15,7 @@
 		5778FA222BCD849900CCB87F /* BonVoyageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5778FA212BCD849900CCB87F /* BonVoyageUITests.swift */; };
 		5778FA242BCD849900CCB87F /* BonVoyageUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5778FA232BCD849900CCB87F /* BonVoyageUITestsLaunchTests.swift */; };
 		5778FA332BCD888100CCB87F /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5778FA322BCD888100CCB87F /* ViewModel.swift */; };
+		5778FA362BCD8DD900CCB87F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5778FA352BCD8DD900CCB87F /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		5778FA302BCD883400CCB87F /* BonVoyage.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BonVoyage.entitlements; sourceTree = "<group>"; };
 		5778FA312BCD883900CCB87F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		5778FA322BCD888100CCB87F /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		5778FA352BCD8DD900CCB87F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5778FA362BCD8DD900CCB87F /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +85,7 @@
 				5778FA162BCD849900CCB87F /* BonVoyageTests */,
 				5778FA202BCD849900CCB87F /* BonVoyageUITests */,
 				5778FA042BCD849800CCB87F /* Products */,
+				5778FA342BCD8DD900CCB87F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,6 +136,14 @@
 				5778FA232BCD849900CCB87F /* BonVoyageUITestsLaunchTests.swift */,
 			);
 			path = BonVoyageUITests;
+			sourceTree = "<group>";
+		};
+		5778FA342BCD8DD900CCB87F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5778FA352BCD8DD900CCB87F /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
