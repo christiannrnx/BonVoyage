@@ -1,0 +1,602 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5778FA072BCD849800CCB87F /* BonVoyageApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5778FA062BCD849800CCB87F /* BonVoyageApp.swift */; };
+		5778FA092BCD849800CCB87F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5778FA082BCD849800CCB87F /* ContentView.swift */; };
+		5778FA0B2BCD849800CCB87F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5778FA0A2BCD849800CCB87F /* Assets.xcassets */; };
+		5778FA0E2BCD849800CCB87F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5778FA0D2BCD849800CCB87F /* Preview Assets.xcassets */; };
+		5778FA182BCD849900CCB87F /* BonVoyageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5778FA172BCD849900CCB87F /* BonVoyageTests.swift */; };
+		5778FA222BCD849900CCB87F /* BonVoyageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5778FA212BCD849900CCB87F /* BonVoyageUITests.swift */; };
+		5778FA242BCD849900CCB87F /* BonVoyageUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5778FA232BCD849900CCB87F /* BonVoyageUITestsLaunchTests.swift */; };
+		5778FA332BCD888100CCB87F /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5778FA322BCD888100CCB87F /* ViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5778FA142BCD849900CCB87F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5778F9FB2BCD849800CCB87F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5778FA022BCD849800CCB87F;
+			remoteInfo = BonVoyage;
+		};
+		5778FA1E2BCD849900CCB87F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5778F9FB2BCD849800CCB87F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5778FA022BCD849800CCB87F;
+			remoteInfo = BonVoyage;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5778FA032BCD849800CCB87F /* BonVoyage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BonVoyage.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5778FA062BCD849800CCB87F /* BonVoyageApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonVoyageApp.swift; sourceTree = "<group>"; };
+		5778FA082BCD849800CCB87F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5778FA0A2BCD849800CCB87F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5778FA0D2BCD849800CCB87F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5778FA132BCD849900CCB87F /* BonVoyageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BonVoyageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5778FA172BCD849900CCB87F /* BonVoyageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonVoyageTests.swift; sourceTree = "<group>"; };
+		5778FA1D2BCD849900CCB87F /* BonVoyageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BonVoyageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5778FA212BCD849900CCB87F /* BonVoyageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonVoyageUITests.swift; sourceTree = "<group>"; };
+		5778FA232BCD849900CCB87F /* BonVoyageUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonVoyageUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5778FA302BCD883400CCB87F /* BonVoyage.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BonVoyage.entitlements; sourceTree = "<group>"; };
+		5778FA312BCD883900CCB87F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		5778FA322BCD888100CCB87F /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5778FA002BCD849800CCB87F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5778FA102BCD849900CCB87F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5778FA1A2BCD849900CCB87F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5778F9FA2BCD849800CCB87F = {
+			isa = PBXGroup;
+			children = (
+				5778FA052BCD849800CCB87F /* BonVoyage */,
+				5778FA162BCD849900CCB87F /* BonVoyageTests */,
+				5778FA202BCD849900CCB87F /* BonVoyageUITests */,
+				5778FA042BCD849800CCB87F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5778FA042BCD849800CCB87F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5778FA032BCD849800CCB87F /* BonVoyage.app */,
+				5778FA132BCD849900CCB87F /* BonVoyageTests.xctest */,
+				5778FA1D2BCD849900CCB87F /* BonVoyageUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5778FA052BCD849800CCB87F /* BonVoyage */ = {
+			isa = PBXGroup;
+			children = (
+				5778FA312BCD883900CCB87F /* Info.plist */,
+				5778FA302BCD883400CCB87F /* BonVoyage.entitlements */,
+				5778FA062BCD849800CCB87F /* BonVoyageApp.swift */,
+				5778FA322BCD888100CCB87F /* ViewModel.swift */,
+				5778FA082BCD849800CCB87F /* ContentView.swift */,
+				5778FA0A2BCD849800CCB87F /* Assets.xcassets */,
+				5778FA0C2BCD849800CCB87F /* Preview Content */,
+			);
+			path = BonVoyage;
+			sourceTree = "<group>";
+		};
+		5778FA0C2BCD849800CCB87F /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				5778FA0D2BCD849800CCB87F /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5778FA162BCD849900CCB87F /* BonVoyageTests */ = {
+			isa = PBXGroup;
+			children = (
+				5778FA172BCD849900CCB87F /* BonVoyageTests.swift */,
+			);
+			path = BonVoyageTests;
+			sourceTree = "<group>";
+		};
+		5778FA202BCD849900CCB87F /* BonVoyageUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5778FA212BCD849900CCB87F /* BonVoyageUITests.swift */,
+				5778FA232BCD849900CCB87F /* BonVoyageUITestsLaunchTests.swift */,
+			);
+			path = BonVoyageUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5778FA022BCD849800CCB87F /* BonVoyage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5778FA272BCD849900CCB87F /* Build configuration list for PBXNativeTarget "BonVoyage" */;
+			buildPhases = (
+				5778F9FF2BCD849800CCB87F /* Sources */,
+				5778FA002BCD849800CCB87F /* Frameworks */,
+				5778FA012BCD849800CCB87F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BonVoyage;
+			productName = BonVoyage;
+			productReference = 5778FA032BCD849800CCB87F /* BonVoyage.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5778FA122BCD849900CCB87F /* BonVoyageTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5778FA2A2BCD849900CCB87F /* Build configuration list for PBXNativeTarget "BonVoyageTests" */;
+			buildPhases = (
+				5778FA0F2BCD849900CCB87F /* Sources */,
+				5778FA102BCD849900CCB87F /* Frameworks */,
+				5778FA112BCD849900CCB87F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5778FA152BCD849900CCB87F /* PBXTargetDependency */,
+			);
+			name = BonVoyageTests;
+			productName = BonVoyageTests;
+			productReference = 5778FA132BCD849900CCB87F /* BonVoyageTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5778FA1C2BCD849900CCB87F /* BonVoyageUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5778FA2D2BCD849900CCB87F /* Build configuration list for PBXNativeTarget "BonVoyageUITests" */;
+			buildPhases = (
+				5778FA192BCD849900CCB87F /* Sources */,
+				5778FA1A2BCD849900CCB87F /* Frameworks */,
+				5778FA1B2BCD849900CCB87F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5778FA1F2BCD849900CCB87F /* PBXTargetDependency */,
+			);
+			name = BonVoyageUITests;
+			productName = BonVoyageUITests;
+			productReference = 5778FA1D2BCD849900CCB87F /* BonVoyageUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5778F9FB2BCD849800CCB87F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					5778FA022BCD849800CCB87F = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+					5778FA122BCD849900CCB87F = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 5778FA022BCD849800CCB87F;
+					};
+					5778FA1C2BCD849900CCB87F = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 5778FA022BCD849800CCB87F;
+					};
+				};
+			};
+			buildConfigurationList = 5778F9FE2BCD849800CCB87F /* Build configuration list for PBXProject "BonVoyage" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5778F9FA2BCD849800CCB87F;
+			productRefGroup = 5778FA042BCD849800CCB87F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5778FA022BCD849800CCB87F /* BonVoyage */,
+				5778FA122BCD849900CCB87F /* BonVoyageTests */,
+				5778FA1C2BCD849900CCB87F /* BonVoyageUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5778FA012BCD849800CCB87F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5778FA0E2BCD849800CCB87F /* Preview Assets.xcassets in Resources */,
+				5778FA0B2BCD849800CCB87F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5778FA112BCD849900CCB87F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5778FA1B2BCD849900CCB87F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5778F9FF2BCD849800CCB87F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5778FA092BCD849800CCB87F /* ContentView.swift in Sources */,
+				5778FA332BCD888100CCB87F /* ViewModel.swift in Sources */,
+				5778FA072BCD849800CCB87F /* BonVoyageApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5778FA0F2BCD849900CCB87F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5778FA182BCD849900CCB87F /* BonVoyageTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5778FA192BCD849900CCB87F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5778FA222BCD849900CCB87F /* BonVoyageUITests.swift in Sources */,
+				5778FA242BCD849900CCB87F /* BonVoyageUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5778FA152BCD849900CCB87F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5778FA022BCD849800CCB87F /* BonVoyage */;
+			targetProxy = 5778FA142BCD849900CCB87F /* PBXContainerItemProxy */;
+		};
+		5778FA1F2BCD849900CCB87F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5778FA022BCD849800CCB87F /* BonVoyage */;
+			targetProxy = 5778FA1E2BCD849900CCB87F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		5778FA252BCD849900CCB87F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5778FA262BCD849900CCB87F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5778FA282BCD849900CCB87F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BonVoyage/BonVoyage.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BonVoyage/Preview Content\"";
+				DEVELOPMENT_TEAM = Q3WX6797WM;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BonVoyage/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.navigation";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Christian.BonVoyage;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5778FA292BCD849900CCB87F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BonVoyage/BonVoyage.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BonVoyage/Preview Content\"";
+				DEVELOPMENT_TEAM = Q3WX6797WM;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BonVoyage/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.navigation";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Christian.BonVoyage;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5778FA2B2BCD849900CCB87F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q3WX6797WM;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Christian.BonVoyageTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BonVoyage.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BonVoyage";
+			};
+			name = Debug;
+		};
+		5778FA2C2BCD849900CCB87F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q3WX6797WM;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Christian.BonVoyageTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BonVoyage.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BonVoyage";
+			};
+			name = Release;
+		};
+		5778FA2E2BCD849900CCB87F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q3WX6797WM;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Christian.BonVoyageUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BonVoyage;
+			};
+			name = Debug;
+		};
+		5778FA2F2BCD849900CCB87F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q3WX6797WM;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Christian.BonVoyageUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BonVoyage;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5778F9FE2BCD849800CCB87F /* Build configuration list for PBXProject "BonVoyage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5778FA252BCD849900CCB87F /* Debug */,
+				5778FA262BCD849900CCB87F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5778FA272BCD849900CCB87F /* Build configuration list for PBXNativeTarget "BonVoyage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5778FA282BCD849900CCB87F /* Debug */,
+				5778FA292BCD849900CCB87F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5778FA2A2BCD849900CCB87F /* Build configuration list for PBXNativeTarget "BonVoyageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5778FA2B2BCD849900CCB87F /* Debug */,
+				5778FA2C2BCD849900CCB87F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5778FA2D2BCD849900CCB87F /* Build configuration list for PBXNativeTarget "BonVoyageUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5778FA2E2BCD849900CCB87F /* Debug */,
+				5778FA2F2BCD849900CCB87F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5778F9FB2BCD849800CCB87F /* Project object */;
+}
