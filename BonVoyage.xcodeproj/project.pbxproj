@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		5725CF692BDAE18B00AB5589 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5725CF682BDAE18B00AB5589 /* LocationManager.swift */; };
+		5725CF6D2BDB011200AB5589 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5725CF6C2BDB011200AB5589 /* HomeView.swift */; };
+		5725CF722BDB019B00AB5589 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5725CF712BDB019B00AB5589 /* MapView.swift */; };
+		5725CF742BDB01A900AB5589 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5725CF732BDB01A900AB5589 /* MapViewModel.swift */; };
 		5778FA072BCD849800CCB87F /* BonVoyageApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5778FA062BCD849800CCB87F /* BonVoyageApp.swift */; };
 		5778FA092BCD849800CCB87F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5778FA082BCD849800CCB87F /* ContentView.swift */; };
 		5778FA0B2BCD849800CCB87F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5778FA0A2BCD849800CCB87F /* Assets.xcassets */; };
@@ -15,7 +18,6 @@
 		5778FA182BCD849900CCB87F /* BonVoyageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5778FA172BCD849900CCB87F /* BonVoyageTests.swift */; };
 		5778FA222BCD849900CCB87F /* BonVoyageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5778FA212BCD849900CCB87F /* BonVoyageUITests.swift */; };
 		5778FA242BCD849900CCB87F /* BonVoyageUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5778FA232BCD849900CCB87F /* BonVoyageUITestsLaunchTests.swift */; };
-		5778FA332BCD888100CCB87F /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5778FA322BCD888100CCB87F /* ViewModel.swift */; };
 		5778FA362BCD8DD900CCB87F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5778FA352BCD8DD900CCB87F /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +40,9 @@
 
 /* Begin PBXFileReference section */
 		5725CF682BDAE18B00AB5589 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		5725CF6C2BDB011200AB5589 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		5725CF712BDB019B00AB5589 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		5725CF732BDB01A900AB5589 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		5778FA032BCD849800CCB87F /* BonVoyage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BonVoyage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5778FA062BCD849800CCB87F /* BonVoyageApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonVoyageApp.swift; sourceTree = "<group>"; };
 		5778FA082BCD849800CCB87F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -50,7 +55,6 @@
 		5778FA232BCD849900CCB87F /* BonVoyageUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonVoyageUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5778FA302BCD883400CCB87F /* BonVoyage.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BonVoyage.entitlements; sourceTree = "<group>"; };
 		5778FA312BCD883900CCB87F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		5778FA322BCD888100CCB87F /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		5778FA352BCD8DD900CCB87F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -83,6 +87,7 @@
 		5725CF662BDAE16700AB5589 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				5725CF6A2BDB00F000AB5589 /* Presentation */,
 				5725CF672BDAE16F00AB5589 /* Manager */,
 			);
 			path = Features;
@@ -94,6 +99,48 @@
 				5725CF682BDAE18B00AB5589 /* LocationManager.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		5725CF6A2BDB00F000AB5589 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				5725CF6E2BDB015400AB5589 /* MapView */,
+				5725CF6B2BDB00FF00AB5589 /* HomeView */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		5725CF6B2BDB00FF00AB5589 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				5725CF6C2BDB011200AB5589 /* HomeView.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		5725CF6E2BDB015400AB5589 /* MapView */ = {
+			isa = PBXGroup;
+			children = (
+				5725CF702BDB017E00AB5589 /* ViewModel */,
+				5725CF6F2BDB017A00AB5589 /* View */,
+			);
+			path = MapView;
+			sourceTree = "<group>";
+		};
+		5725CF6F2BDB017A00AB5589 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5725CF712BDB019B00AB5589 /* MapView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5725CF702BDB017E00AB5589 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5725CF732BDB01A900AB5589 /* MapViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		5778F9FA2BCD849800CCB87F = {
@@ -124,7 +171,6 @@
 				5778FA312BCD883900CCB87F /* Info.plist */,
 				5778FA302BCD883400CCB87F /* BonVoyage.entitlements */,
 				5778FA062BCD849800CCB87F /* BonVoyageApp.swift */,
-				5778FA322BCD888100CCB87F /* ViewModel.swift */,
 				5778FA082BCD849800CCB87F /* ContentView.swift */,
 				5778FA0A2BCD849800CCB87F /* Assets.xcassets */,
 				5778FA0C2BCD849800CCB87F /* Preview Content */,
@@ -296,8 +342,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5725CF692BDAE18B00AB5589 /* LocationManager.swift in Sources */,
+				5725CF722BDB019B00AB5589 /* MapView.swift in Sources */,
 				5778FA092BCD849800CCB87F /* ContentView.swift in Sources */,
-				5778FA332BCD888100CCB87F /* ViewModel.swift in Sources */,
+				5725CF742BDB01A900AB5589 /* MapViewModel.swift in Sources */,
+				5725CF6D2BDB011200AB5589 /* HomeView.swift in Sources */,
 				5778FA072BCD849800CCB87F /* BonVoyageApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -468,6 +516,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -500,6 +549,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

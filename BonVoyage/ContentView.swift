@@ -9,20 +9,9 @@ import SwiftUI
 import MapKit
 
 struct ContentView: View {
+    
     var body: some View {
-        MapView()
-                    .edgesIgnoringSafeArea(.all)
-
-    }
-}
-
-struct MapView: UIViewRepresentable {
-    func makeUIView(context: Context) -> MKMapView {
-        MKMapView()
-    }
-
-    func updateUIView(_ uiView: MKMapView, context: Context) {
-        //  Actualizaciones en el mapa si es necesario
+        HomeView()
     }
 }
 
