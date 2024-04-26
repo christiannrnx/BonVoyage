@@ -50,6 +50,8 @@ enum MyMapStyle: Int {
     var viewingRegion: MKCoordinateRegion?
     var routeDisplaying: Bool = false
     var lookAroundScene: MKLookAroundScene?
+    var route: MKRoute?
+    var destinationCoordinate: CLLocationCoordinate2D?
     
     init(location: CLLocation?, region: MKCoordinateRegion) {
         self.cameraPosition = .region(region)
@@ -61,11 +63,42 @@ enum MyMapStyle: Int {
 
 extension MapViewModel {
     
+    // Feature look around preview
     func fetchLookAroundPreview(coordinate: CLLocationCoordinate2D) async {
         isLoading = true
         lookAroundScene = nil
         let request = MKLookAroundSceneRequest(coordinate: coordinate)
         lookAroundScene = try? await request.scene
+    }
+    
+    //Feature calculate routes
+    func calculateRoute(from source: CLLocationCoordinate2D?, to destination: CLLocationCoordinate2D?) async {
+        
+        guard let source, let destination else { return }
+        isLoading = true
+        
+        // Request MapKit for the route
+        let request = MKDirections.Request()
+        request.source = .init(placemark: .init(coordinate: source))
+        request.destination = .init(placemark: .init(coordinate: destination))
+        request.transportType = .automobile
+        
+        let result = try? await MKDirections(request: request).calculate()
+        route = result?.routes.first
+        mapSelection = request.destination
+        destinationCoordinate = destination
+        
+        withAnimation(.snappy){
+            routeDisplaying = true
+            isLoading = false
+        }
+    }
+    
+    // Function that resets the route data
+    func resetRoute() {
+        routeDisplaying = false
+        route = nil
+        destinationCoordinate = nil
     }
     
 }

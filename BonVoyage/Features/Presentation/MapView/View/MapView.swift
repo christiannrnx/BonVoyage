@@ -43,11 +43,22 @@ struct MapView: View {
             // User location point
             UserAnnotation()
             
+            if let route = viewModel.route {
+                if let coordinate = viewModel.destinationCoordinate {
+                    Annotation("Destino", coordinate: coordinate) {
+                        AnimatedMarker(systemName: "mappin.circle.fill", imageColor: .red, backgroundColor: .clear)
+                    }.annotationTitles(.hidden)
+                }
+                
+                MapPolyline(route.polyline)
+                    .stroke(.red, lineWidth: 8)
+            }
+            
             if viewModel.lookAroundScene != nil {
                 if let coordinate = viewModel.viewingRegion?.center {
-                    Annotation("Marker", coordinate: coordinate) {
-                        AnimatedMarker(systemName: "mappin.circle.fill", imageColor: .red, backgroundColor: .clear)
-                    }
+                    Annotation("Marcador", coordinate: coordinate) {
+                        AnimatedMarker(systemName: "binoculars.fill", imageColor: .blue, backgroundColor: .clear)
+                    }.annotationTitles(.hidden)
                 }
             }
             
@@ -68,6 +79,18 @@ struct MapView: View {
                 // Bottom Leading Buttons
                 if !viewModel.routeDisplaying {
                     bottomLeadingOverlayView
+                }
+            }
+            .safeAreaInset(edge: .bottom) {
+                if viewModel.routeDisplaying {
+                    endRouteButtonView
+                }
+            }
+            .onTapGesture {
+                if !viewModel.routeDisplaying {
+                    Task {
+                        await viewModel.calculateRoute(from: viewModel.location?.coordinate, to: viewModel.viewingRegion?.center)
+                    }
                 }
             }
     }

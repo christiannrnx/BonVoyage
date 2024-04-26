@@ -18,36 +18,6 @@
             endingLineNumber = "24"
             landmarkName = "body"
             landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "BBC162FB-A2BE-499D-880D-8B03E53DB0FF - 3d59d8824e0b5f96"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "BonVoyage.MapView.body.getter : some"
-                  moduleName = "BonVoyage"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/christianromero/BonVoyage/BonVoyage/Features/Presentation/MapView/View/MapView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24">
-               </Location>
-               <Location
-                  uuid = "BBC162FB-A2BE-499D-880D-8B03E53DB0FF - b027b61b71ebdcc0"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of BonVoyage.MapView.mapView : some&gt;&gt;.0, Swift.Optional&lt;&lt;&lt;opaque return type of BonVoyage.MapView.lookAroundPreviewView : some&gt;&gt;.0&gt;)&gt; in BonVoyage.MapView.body.getter : some"
-                  moduleName = "BonVoyage"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/christianromero/BonVoyage/BonVoyage/Features/Presentation/MapView/View/MapView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

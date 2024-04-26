@@ -88,6 +88,30 @@ extension MapView {
 }
 
 
+// End Route Button
+extension MapView {
+    var endRouteButtonView: some View {
+        Button("Finalizar") {
+            withAnimation(.snappy){
+                viewModel.resetRoute()
+                if let coordinate = viewModel.mapSelection?.placemark.coordinate {
+                    viewModel.cameraPosition = .region(.init(center: coordinate, latitudinalMeters: 1000, longitudinalMeters: 1000))
+                }
+            }
+        }
+        .foregroundStyle(.white)
+        .frame(maxWidth: .infinity)
+        .contentShape(Rectangle())
+        .padding(.vertical, 12)
+        .background(.red.gradient, in: .rect(cornerRadius: 15))
+        .padding()
+        .background(.ultraThinMaterial)
+    }
+    
+}
+
+
+
 // Look Around Preview
 extension MapView {
     
