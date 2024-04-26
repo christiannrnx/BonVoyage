@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MapKit
 
 // Top Trailing Buttons
 extension MapView {
@@ -60,5 +61,67 @@ extension MapView {
                 .foregroundColor(.init(.systemBackground))
         ).offset(y:-100)
     }
+    
+}
+
+
+// Bottom Leading Button
+extension MapView {
+    
+    var bottomLeadingOverlayView: some View {
+        
+        IconView(systemName: "binoculars.fill")
+            .frame(width: 62, height: 46)
+            .offset(y:-100)
+            .onTapGesture {
+                Task {
+                    guard let coordinate = viewModel.viewingRegion?.center else {
+                        showErrorAlert = true
+                        return
+                    }
+                    await viewModel.fetchLookAroundPreview(coordinate: coordinate)
+                    viewModel.isLoading = false
+                }
+            }
+    }
+    
+}
+
+
+// Look Around Preview
+extension MapView {
+    
+    var lookAroundPreviewView: some View {
+        
+        VStack {
+            
+            LookAroundPreview(scene: $viewModel.lookAroundScene)
+                .frame(height: lookAroundViewIsExpanded ? UIScreen.main.bounds.height - 32 : 300)
+                .animation(.easeInOut, value: viewModel.lookAroundScene)
+                .overlay(alignment: .topTrailing, content: {
+                    VStack {
+                        IconView(systemName: "xmark.circle.fill")
+                            .frame(width: 62, height: 46)
+                            .onTapGesture {
+                                Task {
+                                    viewModel.lookAroundScene = nil
+                                    lookAroundViewIsExpanded = false
+                                }
+                            }
+                        IconView(systemName: lookAroundViewIsExpanded ? "arrow.down.right.and.arrow.up.left" : "arrow.up.backward.and.arrow.down.forward")
+                            .frame(width: 62, height: 46)
+                            .onTapGesture {
+                                Task {
+                                    lookAroundViewIsExpanded.toggle()
+                                }
+                            }
+                    }.padding(.vertical)
+                }).padding(.horizontal, 4)
+            Spacer()
+            
+        }
+
+    }
+
     
 }

@@ -48,12 +48,24 @@ enum MyMapStyle: Int {
     var mapStyle: MyMapStyle = .standard
     var isLoading: Bool = false
     var viewingRegion: MKCoordinateRegion?
+    var routeDisplaying: Bool = false
+    var lookAroundScene: MKLookAroundScene?
     
     init(location: CLLocation?, region: MKCoordinateRegion) {
         self.cameraPosition = .region(region)
         self.location = location
         self.region = region
     }
+}
+
+
+extension MapViewModel {
     
+    func fetchLookAroundPreview(coordinate: CLLocationCoordinate2D) async {
+        isLoading = true
+        lookAroundScene = nil
+        let request = MKLookAroundSceneRequest(coordinate: coordinate)
+        lookAroundScene = try? await request.scene
+    }
     
 }
