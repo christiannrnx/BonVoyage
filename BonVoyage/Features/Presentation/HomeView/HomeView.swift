@@ -14,7 +14,7 @@ struct HomeView: View {
     var body: some View {
         
         if let location = locationManager.location, let region = locationManager.region {
-            MapView(viewModel: MapViewModel(location: loation, region: region))
+            MapView(viewModel: MapViewModel(location: location, region: region))
         } else {
             ProgressView()
         }

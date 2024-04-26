@@ -11,6 +11,8 @@
 		5725CF6D2BDB011200AB5589 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5725CF6C2BDB011200AB5589 /* HomeView.swift */; };
 		5725CF722BDB019B00AB5589 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5725CF712BDB019B00AB5589 /* MapView.swift */; };
 		5725CF742BDB01A900AB5589 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5725CF732BDB01A900AB5589 /* MapViewModel.swift */; };
+		573AC1C62BDB6CEB00D32220 /* MapViewComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573AC1C52BDB6CEB00D32220 /* MapViewComponents.swift */; };
+		573AC1C92BDB6E4600D32220 /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573AC1C82BDB6E4600D32220 /* IconView.swift */; };
 		5778FA072BCD849800CCB87F /* BonVoyageApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5778FA062BCD849800CCB87F /* BonVoyageApp.swift */; };
 		5778FA092BCD849800CCB87F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5778FA082BCD849800CCB87F /* ContentView.swift */; };
 		5778FA0B2BCD849800CCB87F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5778FA0A2BCD849800CCB87F /* Assets.xcassets */; };
@@ -43,6 +45,8 @@
 		5725CF6C2BDB011200AB5589 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		5725CF712BDB019B00AB5589 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		5725CF732BDB01A900AB5589 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		573AC1C52BDB6CEB00D32220 /* MapViewComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewComponents.swift; sourceTree = "<group>"; };
+		573AC1C82BDB6E4600D32220 /* IconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconView.swift; sourceTree = "<group>"; };
 		5778FA032BCD849800CCB87F /* BonVoyage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BonVoyage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5778FA062BCD849800CCB87F /* BonVoyageApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonVoyageApp.swift; sourceTree = "<group>"; };
 		5778FA082BCD849800CCB87F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -104,6 +108,7 @@
 		5725CF6A2BDB00F000AB5589 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				573AC1C72BDB6E2B00D32220 /* Components */,
 				5725CF6E2BDB015400AB5589 /* MapView */,
 				5725CF6B2BDB00FF00AB5589 /* HomeView */,
 			);
@@ -130,6 +135,7 @@
 		5725CF6F2BDB017A00AB5589 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				573AC1C42BDB6CD100D32220 /* Components */,
 				5725CF712BDB019B00AB5589 /* MapView.swift */,
 			);
 			path = View;
@@ -141,6 +147,22 @@
 				5725CF732BDB01A900AB5589 /* MapViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		573AC1C42BDB6CD100D32220 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				573AC1C52BDB6CEB00D32220 /* MapViewComponents.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		573AC1C72BDB6E2B00D32220 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				573AC1C82BDB6E4600D32220 /* IconView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		5778F9FA2BCD849800CCB87F = {
@@ -345,6 +367,8 @@
 				5725CF722BDB019B00AB5589 /* MapView.swift in Sources */,
 				5778FA092BCD849800CCB87F /* ContentView.swift in Sources */,
 				5725CF742BDB01A900AB5589 /* MapViewModel.swift in Sources */,
+				573AC1C62BDB6CEB00D32220 /* MapViewComponents.swift in Sources */,
+				573AC1C92BDB6E4600D32220 /* IconView.swift in Sources */,
 				5725CF6D2BDB011200AB5589 /* HomeView.swift in Sources */,
 				5778FA072BCD849800CCB87F /* BonVoyageApp.swift in Sources */,
 			);

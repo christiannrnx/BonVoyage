@@ -18,9 +18,17 @@ struct MapView: View {
     }
     
     var body: some View {
-        Map(position: $viewModel.cameraPosition, selection: $viewModel.mapSelection){
+        
+        ZStack{
+            Map(position: $viewModel.cameraPosition, selection: $viewModel.mapSelection){
+                UserAnnotation()
+            }.mapStyle(viewModel.mapStyle.toMapStyle())
+                .overlay(alignment: .topTrailing) {
+                    topTrailingOverlayView
+                }
             
         }
+        
     }
 }
 
