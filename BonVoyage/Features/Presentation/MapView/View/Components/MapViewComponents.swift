@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// Top Trailing Buttons
 extension MapView {
     
     var topTrailingOverlayView: some View {
@@ -37,9 +38,27 @@ extension MapView {
                         }
                     }
             }
-            
         }
+    }
+}
+
+// Bottom Trailing Button
+extension MapView {
+    
+    var bottomTrailingOverlayView: some View {
         
+        HStack(spacing: -10){
+            IconView(systemName: "sun.min.fill", imageColor: .yellow)
+                .offset(x:-10)
+            Text("14º")
+                .foregroundColor(.init(.gray))
+                .font(.title3)
+                .offset(x:-13)
+        }.background(
+            RoundedRectangle(cornerRadius: 10)
+                .frame(width: 62, height: 46)
+                .foregroundColor(.init(.systemBackground))
+        ).offset(y:-100)
     }
     
 }
