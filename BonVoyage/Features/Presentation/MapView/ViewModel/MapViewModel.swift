@@ -46,6 +46,8 @@ enum MyMapStyle: Int {
     var region: MKCoordinateRegion
     var mapSelection: MKMapItem?
     var mapStyle: MyMapStyle = .standard
+    var isLoading: Bool = false
+    var viewingRegion: MKCoordinateRegion?
     
     init(location: CLLocation?, region: MKCoordinateRegion) {
         self.cameraPosition = .region(region)

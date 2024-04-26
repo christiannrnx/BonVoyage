@@ -23,6 +23,9 @@ struct MapView: View {
             Map(position: $viewModel.cameraPosition, selection: $viewModel.mapSelection){
                 UserAnnotation()
             }.mapStyle(viewModel.mapStyle.toMapStyle())
+                .onMapCameraChange { ctx in
+                    viewModel.viewingRegion = ctx.region
+                }
                 .overlay(alignment: .topTrailing) {
                     topTrailingOverlayView
                 }
