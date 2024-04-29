@@ -52,6 +52,11 @@ enum MyMapStyle: Int {
     var lookAroundScene: MKLookAroundScene?
     var route: MKRoute?
     var destinationCoordinate: CLLocationCoordinate2D?
+    // Search Properties
+    var searchText: String = ""
+    var showSearch: Bool = false
+    var searchResults: [MKMapItem] = []
+    
     
     init(location: CLLocation?, region: MKCoordinateRegion) {
         self.cameraPosition = .region(region)
@@ -99,6 +104,15 @@ extension MapViewModel {
         routeDisplaying = false
         route = nil
         destinationCoordinate = nil
+    }
+    
+    // Function to search a place with the searchBar
+    func searchPlaces() async {
+        let request = MKLocalSearch.Request()
+        request.naturalLanguageQuery = searchText
+        request.region = region
+        let results = try? await MKLocalSearch(request: request).start()
+        searchResults = results?.mapItems ?? []
     }
     
 }

@@ -146,6 +146,4 @@ extension MapView {
         }
 
     }
-
-    
 }
