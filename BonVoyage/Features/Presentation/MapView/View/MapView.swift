@@ -101,16 +101,23 @@ struct MapView: View {
                         }
                     }
                 }
-                //.navigationTitle("Map")
-                //.navigationBarTitleDisplayMode(.inline)
+                .navigationTitle("Map")
+                .navigationBarTitleDisplayMode(.inline)
                 .searchable(text: $viewModel.searchText, isPresented: $viewModel.showSearch)
                 .toolbarBackground(.visible, for: .navigationBar)
                 .toolbarBackground(.ultraThinMaterial, for: .navigationBar)
         }
         .onSubmit(of: .search) {
             Task {
+                // Search places
                 guard !viewModel.searchText.isEmpty else { return }
                 await viewModel.searchPlaces()
+            }
+        }
+        .onChange(of: viewModel.showSearch, initial: false) {
+            if !viewModel.showSearch {
+                // Clear search results
+                viewModel.searchResults.removeAll(keepingCapacity: false)
             }
         }
         
