@@ -39,6 +39,12 @@ extension MapView {
                         }
                     }
             }
+            
+            // User Profile
+            IconView(systemName: "person.crop.circle.fill")
+                .onTapGesture {
+                    self.viewModel.mapStyle = viewModel.mapStyle.toogle()
+                }
         }
     }
 }
@@ -79,6 +85,7 @@ extension MapView {
                         showErrorAlert = true
                         return
                     }
+                    viewModel.lookAroundBinoculars = true
                     await viewModel.fetchLookAroundPreview(coordinate: coordinate)
                     viewModel.isLoading = false
                 }
@@ -130,6 +137,7 @@ extension MapView {
                                 Task {
                                     viewModel.lookAroundScene = nil
                                     lookAroundViewIsExpanded = false
+                                    viewModel.lookAroundBinoculars = false
                                 }
                             }
                         IconView(systemName: lookAroundViewIsExpanded ? "arrow.down.right.and.arrow.up.left" : "arrow.up.backward.and.arrow.down.forward")
@@ -146,4 +154,53 @@ extension MapView {
         }
 
     }
+}
+
+
+// Place Details
+extension MapView {
+    
+    var placeDetailsView: some View {
+        
+        VStack(spacing: 15) {
+            ZStack {
+                if viewModel.lookAroundScene == nil {
+                    // Empty Look Around Preview
+                    ContentUnavailableView("No Preview Available", systemImage: "eye.slash")
+                } else {
+                    LookAroundPreview(scene: $viewModel.lookAroundScene)
+                }
+            }
+            .frame(height: 200)
+            .clipShape(.rect(cornerRadius: 15))
+            
+            // Calculate Route Button
+            Button("Iniciar Ruta") {
+                Task {
+                    await viewModel.calculateRoute(from: viewModel.location?.coordinate, to: viewModel.mapSelection?.placemark.coordinate)
+                    viewModel.showDetails = false
+                    
+                }
+            }
+            .foregroundStyle(.white)
+            .frame(maxWidth: .infinity)
+            .padding(.vertical, 12)
+            .background(.red.gradient, in: .rect(cornerRadius: 15))
+            
+        }
+        .padding(15)
+        .overlay(alignment: .topTrailing, content: {
+            VStack {
+                IconView(systemName: "xmark.circle.fill")
+                    .frame(width: 62, height: 46)
+                    .onTapGesture {
+                        Task {
+                            viewModel.showDetails = false
+                        }
+                    }
+            }.padding(.vertical)
+        }).padding(.horizontal, 4)
+        
+    }
+    
 }

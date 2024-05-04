@@ -24,7 +24,7 @@ struct MapView: View {
         ZStack{
             mapView
             
-            if viewModel.lookAroundScene != nil {
+            if viewModel.lookAroundScene != nil && viewModel.lookAroundBinoculars {
                 lookAroundPreviewView
             }
             
@@ -56,7 +56,7 @@ struct MapView: View {
                         .stroke(.red, lineWidth: 8)
                 }
                 
-                if viewModel.lookAroundScene != nil {
+                if viewModel.lookAroundScene != nil && viewModel.lookAroundBinoculars {
                     if let coordinate = viewModel.viewingRegion?.center {
                         Annotation("Marcador", coordinate: coordinate) {
                             AnimatedMarker(systemName: "binoculars.fill", imageColor: .blue, backgroundColor: .clear)
@@ -94,22 +94,36 @@ struct MapView: View {
                         endRouteButtonView
                     }
                 }
+            /*
                 .onTapGesture {
                     if !viewModel.routeDisplaying {
                         Task {
                             await viewModel.calculateRoute(from: viewModel.location?.coordinate, to: viewModel.viewingRegion?.center)
                         }
                     }
+                    
                 }
-                .navigationTitle("Map")
+             */
+                .navigationTitle("BonVoyage")
                 .navigationBarTitleDisplayMode(.inline)
+                // Search Bar
                 .searchable(text: $viewModel.searchText, isPresented: $viewModel.showSearch)
                 .toolbarBackground(.visible, for: .navigationBar)
                 .toolbarBackground(.ultraThinMaterial, for: .navigationBar)
+                .sheet(isPresented: $viewModel.showDetails) {
+                    
+                } content: {
+                    placeDetailsView
+                        .presentationDetents([.height(300)])
+                        .presentationBackgroundInteraction(.enabled(upThrough: .height(300)))
+                        .presentationCornerRadius(15)
+                        .interactiveDismissDisabled(true)
+                }
         }
         .onSubmit(of: .search) {
             Task {
-                // Search places
+                viewModel.resetRoute()
+                // Search places by text
                 guard !viewModel.searchText.isEmpty else { return }
                 await viewModel.searchPlaces()
             }
@@ -118,7 +132,14 @@ struct MapView: View {
             if !viewModel.showSearch {
                 // Clear search results
                 viewModel.searchResults.removeAll(keepingCapacity: false)
+                viewModel.showDetails = false
             }
+        }
+        .onChange(of: viewModel.mapSelection) { oldValue, newValue in
+            // Show details about the searched place
+            viewModel.showDetails = newValue != nil
+            // Change look around preview when selection changes
+            viewModel.fetchDetailsLookAroundPreview()
         }
         
         

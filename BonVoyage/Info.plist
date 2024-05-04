@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>BonVoyage requires to access your location to track your trip</string>
+	<string>Tu ubicación sirve para mostrar tu posición en el mapa, obtener indicaciones, estimar los tiempos de viaje y mejorar los resultados de búsqueda.</string>
 	<key>CFBundleDocumentTypes</key>
 	<array>
 		<dict>

@@ -48,15 +48,19 @@ enum MyMapStyle: Int {
     var mapStyle: MyMapStyle = .standard
     var isLoading: Bool = false
     var viewingRegion: MKCoordinateRegion?
-    var routeDisplaying: Bool = false
+    // Look around feature
     var lookAroundScene: MKLookAroundScene?
+    var lookAroundBinoculars: Bool = false
+    // Calculate route
+    var routeDisplaying: Bool = false
     var route: MKRoute?
     var destinationCoordinate: CLLocationCoordinate2D?
     // Search Properties
     var searchText: String = ""
     var showSearch: Bool = false
     var searchResults: [MKMapItem] = []
-    
+    // Place Details Properties
+    var showDetails: Bool = false
     
     init(location: CLLocation?, region: MKCoordinateRegion) {
         self.cameraPosition = .region(region)
@@ -74,6 +78,18 @@ extension MapViewModel {
         lookAroundScene = nil
         let request = MKLookAroundSceneRequest(coordinate: coordinate)
         lookAroundScene = try? await request.scene
+    }
+    
+    // Feature look around preview for selected place
+    func fetchDetailsLookAroundPreview() {
+        if let mapSelection {
+            // Clear old one
+            lookAroundScene = nil
+            Task {
+                let request = MKLookAroundSceneRequest(mapItem: mapSelection)
+                lookAroundScene = try? await request.scene
+            }
+        }
     }
     
     //Feature calculate routes
