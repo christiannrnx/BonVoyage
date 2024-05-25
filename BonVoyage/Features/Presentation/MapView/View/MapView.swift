@@ -2,7 +2,7 @@
 //  MapView.swift
 //  BonVoyage
 //
-//  Created by Christian Romero on 25/4/24.
+//  Created by Christian Romero
 //
 
 import SwiftUI
@@ -29,9 +29,9 @@ struct MapView: View {
             }
             
         }.alert(isPresented: $showErrorAlert){
-            Alert(title: Text("Important message"),
-                  message: Text("Unexpected error is happening"),
-                  dismissButton: .default(Text("Got it!")))
+            Alert(title: Text("Alerta"),
+                  message: Text("Error inesperado"),
+                  dismissButton: .default(Text("De acuerdo")))
         }
         
     }
@@ -114,8 +114,8 @@ struct MapView: View {
                     
                 } content: {
                     placeDetailsView
-                        .presentationDetents([.height(300)])
-                        .presentationBackgroundInteraction(.enabled(upThrough: .height(300)))
+                        .presentationDetents([.height(340)])
+                        .presentationBackgroundInteraction(.enabled(upThrough: .height(340)))
                         .presentationCornerRadius(15)
                         .interactiveDismissDisabled(true)
                 }

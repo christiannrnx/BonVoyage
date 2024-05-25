@@ -2,7 +2,7 @@
 //  BonVoyageApp.swift
 //  BonVoyage
 //
-//  Created by Christian Romero on 15/4/24.
+//  Created by Christian Romero
 //
 
 import SwiftUI

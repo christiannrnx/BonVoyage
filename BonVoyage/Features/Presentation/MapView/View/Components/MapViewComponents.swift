@@ -2,7 +2,7 @@
 //  MapViewComponents.swift
 //  BonVoyage
 //
-//  Created by Christian Romero on 26/4/24.
+//  Created by Christian Romero
 //
 
 import SwiftUI
@@ -55,9 +55,9 @@ extension MapView {
     var bottomTrailingOverlayView: some View {
         
         HStack(spacing: -10){
-            IconView(systemName: "sun.min.fill", imageColor: .yellow)
+            IconView(systemName: "heart.fill", imageColor: .red)
                 .offset(x:-10)
-            Text("14º")
+            Text("69")
                 .foregroundColor(.init(.gray))
                 .font(.title3)
                 .offset(x:-13)
@@ -163,6 +163,33 @@ extension MapView {
     var placeDetailsView: some View {
         
         VStack(spacing: 15) {
+            HStack {
+                
+                VStack (alignment: .leading) {
+                    Text(viewModel.mapSelection?.placemark.name ?? "")
+                        .font(.title2)
+                        .fontWeight(.semibold)
+                    
+                    Text(viewModel.mapSelection?.placemark.title ?? "")
+                        .font(.footnote)
+                        .foregroundStyle(.gray)
+                        .lineLimit(2)
+                        .padding(.trailing)
+                }
+                
+                Spacer()
+                
+                Button {
+                    viewModel.showDetails.toggle()
+                    viewModel.mapSelection = nil
+                } label: {
+                    Image(systemName: "xmark.circle.fill")
+                        .resizable()
+                        .frame(width: 24, height: 24)
+                        .foregroundStyle(.gray, Color(.systemGray6))
+                }
+
+            }
             ZStack {
                 if viewModel.lookAroundScene == nil {
                     // Empty Look Around Preview
@@ -189,18 +216,6 @@ extension MapView {
             
         }
         .padding(15)
-        .overlay(alignment: .topTrailing, content: {
-            VStack {
-                IconView(systemName: "xmark.circle.fill")
-                    .frame(width: 62, height: 46)
-                    .onTapGesture {
-                        Task {
-                            viewModel.showDetails = false
-                        }
-                    }
-            }.padding(.vertical)
-        }).padding(.horizontal, 4)
-        
     }
     
 }

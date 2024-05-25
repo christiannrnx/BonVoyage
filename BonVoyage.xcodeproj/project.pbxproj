@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,28 +18,21 @@
 		5778FA092BCD849800CCB87F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5778FA082BCD849800CCB87F /* ContentView.swift */; };
 		5778FA0B2BCD849800CCB87F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5778FA0A2BCD849800CCB87F /* Assets.xcassets */; };
 		5778FA0E2BCD849800CCB87F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5778FA0D2BCD849800CCB87F /* Preview Assets.xcassets */; };
-		5778FA182BCD849900CCB87F /* BonVoyageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5778FA172BCD849900CCB87F /* BonVoyageTests.swift */; };
-		5778FA222BCD849900CCB87F /* BonVoyageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5778FA212BCD849900CCB87F /* BonVoyageUITests.swift */; };
-		5778FA242BCD849900CCB87F /* BonVoyageUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5778FA232BCD849900CCB87F /* BonVoyageUITestsLaunchTests.swift */; };
 		5778FA362BCD8DD900CCB87F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5778FA352BCD8DD900CCB87F /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		5778FA142BCD849900CCB87F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5778F9FB2BCD849800CCB87F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5778FA022BCD849800CCB87F;
-			remoteInfo = BonVoyage;
+/* Begin PBXCopyFilesBuildPhase section */
+		576AAF8C2BFDF30700588BB7 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5778FA1E2BCD849900CCB87F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5778F9FB2BCD849800CCB87F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5778FA022BCD849800CCB87F;
-			remoteInfo = BonVoyage;
-		};
-/* End PBXContainerItemProxy section */
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5725CF682BDAE18B00AB5589 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
@@ -49,16 +42,12 @@
 		573AC1C52BDB6CEB00D32220 /* MapViewComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewComponents.swift; sourceTree = "<group>"; };
 		573AC1C82BDB6E4600D32220 /* IconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconView.swift; sourceTree = "<group>"; };
 		573AC1CA2BDB7FDE00D32220 /* AnimatedMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedMarker.swift; sourceTree = "<group>"; };
+		576AAF842BFDF2E500588BB7 /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS10.4.sdk/System/Library/Frameworks/WatchKit.framework; sourceTree = DEVELOPER_DIR; };
 		5778FA032BCD849800CCB87F /* BonVoyage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BonVoyage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5778FA062BCD849800CCB87F /* BonVoyageApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonVoyageApp.swift; sourceTree = "<group>"; };
 		5778FA082BCD849800CCB87F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5778FA0A2BCD849800CCB87F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5778FA0D2BCD849800CCB87F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		5778FA132BCD849900CCB87F /* BonVoyageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BonVoyageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5778FA172BCD849900CCB87F /* BonVoyageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonVoyageTests.swift; sourceTree = "<group>"; };
-		5778FA1D2BCD849900CCB87F /* BonVoyageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BonVoyageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5778FA212BCD849900CCB87F /* BonVoyageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonVoyageUITests.swift; sourceTree = "<group>"; };
-		5778FA232BCD849900CCB87F /* BonVoyageUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonVoyageUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5778FA302BCD883400CCB87F /* BonVoyage.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BonVoyage.entitlements; sourceTree = "<group>"; };
 		5778FA312BCD883900CCB87F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		5778FA352BCD8DD900CCB87F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -70,20 +59,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5778FA362BCD8DD900CCB87F /* MapKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5778FA102BCD849900CCB87F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5778FA1A2BCD849900CCB87F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,8 +147,6 @@
 			isa = PBXGroup;
 			children = (
 				5778FA052BCD849800CCB87F /* BonVoyage */,
-				5778FA162BCD849900CCB87F /* BonVoyageTests */,
-				5778FA202BCD849900CCB87F /* BonVoyageUITests */,
 				5778FA042BCD849800CCB87F /* Products */,
 				5778FA342BCD8DD900CCB87F /* Frameworks */,
 			);
@@ -183,8 +156,6 @@
 			isa = PBXGroup;
 			children = (
 				5778FA032BCD849800CCB87F /* BonVoyage.app */,
-				5778FA132BCD849900CCB87F /* BonVoyageTests.xctest */,
-				5778FA1D2BCD849900CCB87F /* BonVoyageUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -211,26 +182,10 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		5778FA162BCD849900CCB87F /* BonVoyageTests */ = {
-			isa = PBXGroup;
-			children = (
-				5778FA172BCD849900CCB87F /* BonVoyageTests.swift */,
-			);
-			path = BonVoyageTests;
-			sourceTree = "<group>";
-		};
-		5778FA202BCD849900CCB87F /* BonVoyageUITests */ = {
-			isa = PBXGroup;
-			children = (
-				5778FA212BCD849900CCB87F /* BonVoyageUITests.swift */,
-				5778FA232BCD849900CCB87F /* BonVoyageUITestsLaunchTests.swift */,
-			);
-			path = BonVoyageUITests;
-			sourceTree = "<group>";
-		};
 		5778FA342BCD8DD900CCB87F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				576AAF842BFDF2E500588BB7 /* WatchKit.framework */,
 				5778FA352BCD8DD900CCB87F /* MapKit.framework */,
 			);
 			name = Frameworks;
@@ -246,51 +201,18 @@
 				5778F9FF2BCD849800CCB87F /* Sources */,
 				5778FA002BCD849800CCB87F /* Frameworks */,
 				5778FA012BCD849800CCB87F /* Resources */,
+				576AAF8C2BFDF30700588BB7 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = BonVoyage;
+			packageProductDependencies = (
+			);
 			productName = BonVoyage;
 			productReference = 5778FA032BCD849800CCB87F /* BonVoyage.app */;
 			productType = "com.apple.product-type.application";
-		};
-		5778FA122BCD849900CCB87F /* BonVoyageTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5778FA2A2BCD849900CCB87F /* Build configuration list for PBXNativeTarget "BonVoyageTests" */;
-			buildPhases = (
-				5778FA0F2BCD849900CCB87F /* Sources */,
-				5778FA102BCD849900CCB87F /* Frameworks */,
-				5778FA112BCD849900CCB87F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5778FA152BCD849900CCB87F /* PBXTargetDependency */,
-			);
-			name = BonVoyageTests;
-			productName = BonVoyageTests;
-			productReference = 5778FA132BCD849900CCB87F /* BonVoyageTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		5778FA1C2BCD849900CCB87F /* BonVoyageUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5778FA2D2BCD849900CCB87F /* Build configuration list for PBXNativeTarget "BonVoyageUITests" */;
-			buildPhases = (
-				5778FA192BCD849900CCB87F /* Sources */,
-				5778FA1A2BCD849900CCB87F /* Frameworks */,
-				5778FA1B2BCD849900CCB87F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5778FA1F2BCD849900CCB87F /* PBXTargetDependency */,
-			);
-			name = BonVoyageUITests;
-			productName = BonVoyageUITests;
-			productReference = 5778FA1D2BCD849900CCB87F /* BonVoyageUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -305,14 +227,6 @@
 					5778FA022BCD849800CCB87F = {
 						CreatedOnToolsVersion = 14.0.1;
 					};
-					5778FA122BCD849900CCB87F = {
-						CreatedOnToolsVersion = 14.0.1;
-						TestTargetID = 5778FA022BCD849800CCB87F;
-					};
-					5778FA1C2BCD849900CCB87F = {
-						CreatedOnToolsVersion = 14.0.1;
-						TestTargetID = 5778FA022BCD849800CCB87F;
-					};
 				};
 			};
 			buildConfigurationList = 5778F9FE2BCD849800CCB87F /* Build configuration list for PBXProject "BonVoyage" */;
@@ -324,13 +238,14 @@
 				Base,
 			);
 			mainGroup = 5778F9FA2BCD849800CCB87F;
+			packageReferences = (
+				576AAFAA2C00BCE400588BB7 /* XCLocalSwiftPackageReference "../Desktop/socket.io-client-swift" */,
+			);
 			productRefGroup = 5778FA042BCD849800CCB87F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				5778FA022BCD849800CCB87F /* BonVoyage */,
-				5778FA122BCD849900CCB87F /* BonVoyageTests */,
-				5778FA1C2BCD849900CCB87F /* BonVoyageUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -342,20 +257,6 @@
 			files = (
 				5778FA0E2BCD849800CCB87F /* Preview Assets.xcassets in Resources */,
 				5778FA0B2BCD849800CCB87F /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5778FA112BCD849900CCB87F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5778FA1B2BCD849900CCB87F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,37 +279,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5778FA0F2BCD849900CCB87F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5778FA182BCD849900CCB87F /* BonVoyageTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5778FA192BCD849900CCB87F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5778FA222BCD849900CCB87F /* BonVoyageUITests.swift in Sources */,
-				5778FA242BCD849900CCB87F /* BonVoyageUITestsLaunchTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		5778FA152BCD849900CCB87F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5778FA022BCD849800CCB87F /* BonVoyage */;
-			targetProxy = 5778FA142BCD849900CCB87F /* PBXContainerItemProxy */;
-		};
-		5778FA1F2BCD849900CCB87F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5778FA022BCD849800CCB87F /* BonVoyage */;
-			targetProxy = 5778FA1E2BCD849900CCB87F /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		5778FA252BCD849900CCB87F /* Debug */ = {
@@ -468,6 +339,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				WATCHOS_DEPLOYMENT_TARGET = 10.4;
 			};
 			name = Debug;
 		};
@@ -522,6 +394,7 @@
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.4;
 			};
 			name = Release;
 		};
@@ -591,82 +464,6 @@
 			};
 			name = Release;
 		};
-		5778FA2B2BCD849900CCB87F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Q3WX6797WM;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Christian.BonVoyageTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BonVoyage.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BonVoyage";
-			};
-			name = Debug;
-		};
-		5778FA2C2BCD849900CCB87F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Q3WX6797WM;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Christian.BonVoyageTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BonVoyage.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BonVoyage";
-			};
-			name = Release;
-		};
-		5778FA2E2BCD849900CCB87F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Q3WX6797WM;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Christian.BonVoyageUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = BonVoyage;
-			};
-			name = Debug;
-		};
-		5778FA2F2BCD849900CCB87F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Q3WX6797WM;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Christian.BonVoyageUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = BonVoyage;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -688,25 +485,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5778FA2A2BCD849900CCB87F /* Build configuration list for PBXNativeTarget "BonVoyageTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5778FA2B2BCD849900CCB87F /* Debug */,
-				5778FA2C2BCD849900CCB87F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5778FA2D2BCD849900CCB87F /* Build configuration list for PBXNativeTarget "BonVoyageUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5778FA2E2BCD849900CCB87F /* Debug */,
-				5778FA2F2BCD849900CCB87F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		576AAFAA2C00BCE400588BB7 /* XCLocalSwiftPackageReference "../Desktop/socket.io-client-swift" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "../Desktop/socket.io-client-swift";
+		};
+/* End XCLocalSwiftPackageReference section */
 	};
 	rootObject = 5778F9FB2BCD849800CCB87F /* Project object */;
 }
