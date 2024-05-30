@@ -14,12 +14,41 @@
 		573AC1C62BDB6CEB00D32220 /* MapViewComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573AC1C52BDB6CEB00D32220 /* MapViewComponents.swift */; };
 		573AC1C92BDB6E4600D32220 /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573AC1C82BDB6E4600D32220 /* IconView.swift */; };
 		573AC1CB2BDB7FDE00D32220 /* AnimatedMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573AC1CA2BDB7FDE00D32220 /* AnimatedMarker.swift */; };
+		576AAFB42C02594500588BB7 /* BonVoyageWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576AAFB32C02594500588BB7 /* BonVoyageWatchApp.swift */; };
+		576AAFB62C02594500588BB7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576AAFB52C02594500588BB7 /* ContentView.swift */; };
+		576AAFB82C02594600588BB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 576AAFB72C02594600588BB7 /* Assets.xcassets */; };
+		576AAFBB2C02594600588BB7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 576AAFBA2C02594600588BB7 /* Preview Assets.xcassets */; };
+		576AAFBE2C02594600588BB7 /* BonVoyageWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 576AAFB12C02594500588BB7 /* BonVoyageWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		576AAFC32C0259CD00588BB7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 576AAFC22C0259CD00588BB7 /* MapKit.framework */; };
+		576AAFCA2C025ACD00588BB7 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576AAFC92C025ACD00588BB7 /* MapView.swift */; };
+		576AAFCB2C025B8300588BB7 /* AnimatedMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573AC1CA2BDB7FDE00D32220 /* AnimatedMarker.swift */; };
+		576AAFD62C025F9200588BB7 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576AAFD52C025F9200588BB7 /* LocationManager.swift */; };
+		576AAFDA2C039AE000588BB7 /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576AAFD92C039AE000588BB7 /* WorkoutView.swift */; };
+		576AAFDC2C039B9200588BB7 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576AAFDB2C039B9200588BB7 /* ViewModel.swift */; };
+		576AAFDE2C039C7600588BB7 /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576AAFDD2C039C7600588BB7 /* WorkoutManager.swift */; };
+		576AAFE02C039CC400588BB7 /* ConnectivityProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576AAFDF2C039CC400588BB7 /* ConnectivityProvider.swift */; };
+		576AAFE22C039D7800588BB7 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576AAFE12C039D7800588BB7 /* LocationModel.swift */; };
+		576AAFE42C039D8400588BB7 /* HeartRateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576AAFE32C039D8400588BB7 /* HeartRateModel.swift */; };
+		576AAFE62C039DEC00588BB7 /* workoutState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576AAFE52C039DEC00588BB7 /* workoutState.swift */; };
+		576AAFE92C03A35600588BB7 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 576AAFE82C03A35600588BB7 /* WatchConnectivity.framework */; };
+		576AAFEB2C03A36D00588BB7 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 576AAFEA2C03A36C00588BB7 /* HealthKit.framework */; };
+		576AAFED2C03A37800588BB7 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 576AAFEC2C03A37800588BB7 /* WatchConnectivity.framework */; };
 		5778FA072BCD849800CCB87F /* BonVoyageApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5778FA062BCD849800CCB87F /* BonVoyageApp.swift */; };
 		5778FA092BCD849800CCB87F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5778FA082BCD849800CCB87F /* ContentView.swift */; };
 		5778FA0B2BCD849800CCB87F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5778FA0A2BCD849800CCB87F /* Assets.xcassets */; };
 		5778FA0E2BCD849800CCB87F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5778FA0D2BCD849800CCB87F /* Preview Assets.xcassets */; };
 		5778FA362BCD8DD900CCB87F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5778FA352BCD8DD900CCB87F /* MapKit.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		576AAFBC2C02594600588BB7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5778F9FB2BCD849800CCB87F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 576AAFB02C02594500588BB7;
+			remoteInfo = "BonVoyageWatch Watch App";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		576AAF8C2BFDF30700588BB7 /* Embed Watch Content */ = {
@@ -28,6 +57,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
+				576AAFBE2C02594600588BB7 /* BonVoyageWatch Watch App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -43,6 +73,26 @@
 		573AC1C82BDB6E4600D32220 /* IconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconView.swift; sourceTree = "<group>"; };
 		573AC1CA2BDB7FDE00D32220 /* AnimatedMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedMarker.swift; sourceTree = "<group>"; };
 		576AAF842BFDF2E500588BB7 /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS10.4.sdk/System/Library/Frameworks/WatchKit.framework; sourceTree = DEVELOPER_DIR; };
+		576AAFB12C02594500588BB7 /* BonVoyageWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BonVoyageWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		576AAFB32C02594500588BB7 /* BonVoyageWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonVoyageWatchApp.swift; sourceTree = "<group>"; };
+		576AAFB52C02594500588BB7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		576AAFB72C02594600588BB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		576AAFBA2C02594600588BB7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		576AAFC22C0259CD00588BB7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS10.4.sdk/System/Library/Frameworks/MapKit.framework; sourceTree = DEVELOPER_DIR; };
+		576AAFC92C025ACD00588BB7 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		576AAFD52C025F9200588BB7 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		576AAFD92C039AE000588BB7 /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
+		576AAFDB2C039B9200588BB7 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		576AAFDD2C039C7600588BB7 /* WorkoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
+		576AAFDF2C039CC400588BB7 /* ConnectivityProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityProvider.swift; sourceTree = "<group>"; };
+		576AAFE12C039D7800588BB7 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
+		576AAFE32C039D8400588BB7 /* HeartRateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateModel.swift; sourceTree = "<group>"; };
+		576AAFE52C039DEC00588BB7 /* workoutState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = workoutState.swift; sourceTree = "<group>"; };
+		576AAFE82C03A35600588BB7 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
+		576AAFEA2C03A36C00588BB7 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS10.4.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		576AAFEC2C03A37800588BB7 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS10.4.sdk/System/Library/Frameworks/WatchConnectivity.framework; sourceTree = DEVELOPER_DIR; };
+		576AAFF92C04DB3F00588BB7 /* BonVoyageWatch Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "BonVoyageWatch Watch App.entitlements"; sourceTree = "<group>"; };
+		576AAFFA2C06045200588BB7 /* BonVoyageWatch-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "BonVoyageWatch-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 		5778FA032BCD849800CCB87F /* BonVoyage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BonVoyage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5778FA062BCD849800CCB87F /* BonVoyageApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonVoyageApp.swift; sourceTree = "<group>"; };
 		5778FA082BCD849800CCB87F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,11 +104,22 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		576AAFAE2C02594500588BB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				576AAFC32C0259CD00588BB7 /* MapKit.framework in Frameworks */,
+				576AAFEB2C03A36D00588BB7 /* HealthKit.framework in Frameworks */,
+				576AAFED2C03A37800588BB7 /* WatchConnectivity.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5778FA002BCD849800CCB87F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				5778FA362BCD8DD900CCB87F /* MapKit.framework in Frameworks */,
+				576AAFE92C03A35600588BB7 /* WatchConnectivity.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,10 +204,65 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		576AAFB22C02594500588BB7 /* BonVoyageWatch Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				576AAFFA2C06045200588BB7 /* BonVoyageWatch-Watch-App-Info.plist */,
+				576AAFF92C04DB3F00588BB7 /* BonVoyageWatch Watch App.entitlements */,
+				576AAFD42C025F7800588BB7 /* Controller */,
+				576AAFCF2C025D0A00588BB7 /* Model */,
+				576AAFC82C025AB700588BB7 /* Views */,
+				576AAFB32C02594500588BB7 /* BonVoyageWatchApp.swift */,
+				576AAFB52C02594500588BB7 /* ContentView.swift */,
+				576AAFB72C02594600588BB7 /* Assets.xcassets */,
+				576AAFB92C02594600588BB7 /* Preview Content */,
+			);
+			path = "BonVoyageWatch Watch App";
+			sourceTree = "<group>";
+		};
+		576AAFB92C02594600588BB7 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				576AAFBA2C02594600588BB7 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		576AAFC82C025AB700588BB7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				576AAFC92C025ACD00588BB7 /* MapView.swift */,
+				576AAFD92C039AE000588BB7 /* WorkoutView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		576AAFCF2C025D0A00588BB7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				576AAFE12C039D7800588BB7 /* LocationModel.swift */,
+				576AAFE32C039D8400588BB7 /* HeartRateModel.swift */,
+				576AAFE52C039DEC00588BB7 /* workoutState.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		576AAFD42C025F7800588BB7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				576AAFD52C025F9200588BB7 /* LocationManager.swift */,
+				576AAFDB2C039B9200588BB7 /* ViewModel.swift */,
+				576AAFDD2C039C7600588BB7 /* WorkoutManager.swift */,
+				576AAFDF2C039CC400588BB7 /* ConnectivityProvider.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		5778F9FA2BCD849800CCB87F = {
 			isa = PBXGroup;
 			children = (
 				5778FA052BCD849800CCB87F /* BonVoyage */,
+				576AAFB22C02594500588BB7 /* BonVoyageWatch Watch App */,
 				5778FA042BCD849800CCB87F /* Products */,
 				5778FA342BCD8DD900CCB87F /* Frameworks */,
 			);
@@ -156,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				5778FA032BCD849800CCB87F /* BonVoyage.app */,
+				576AAFB12C02594500588BB7 /* BonVoyageWatch Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -163,9 +280,9 @@
 		5778FA052BCD849800CCB87F /* BonVoyage */ = {
 			isa = PBXGroup;
 			children = (
+				5778FA302BCD883400CCB87F /* BonVoyage.entitlements */,
 				5725CF662BDAE16700AB5589 /* Features */,
 				5778FA312BCD883900CCB87F /* Info.plist */,
-				5778FA302BCD883400CCB87F /* BonVoyage.entitlements */,
 				5778FA062BCD849800CCB87F /* BonVoyageApp.swift */,
 				5778FA082BCD849800CCB87F /* ContentView.swift */,
 				5778FA0A2BCD849800CCB87F /* Assets.xcassets */,
@@ -185,6 +302,10 @@
 		5778FA342BCD8DD900CCB87F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				576AAFEC2C03A37800588BB7 /* WatchConnectivity.framework */,
+				576AAFEA2C03A36C00588BB7 /* HealthKit.framework */,
+				576AAFE82C03A35600588BB7 /* WatchConnectivity.framework */,
+				576AAFC22C0259CD00588BB7 /* MapKit.framework */,
 				576AAF842BFDF2E500588BB7 /* WatchKit.framework */,
 				5778FA352BCD8DD900CCB87F /* MapKit.framework */,
 			);
@@ -194,6 +315,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		576AAFB02C02594500588BB7 /* BonVoyageWatch Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 576AAFBF2C02594600588BB7 /* Build configuration list for PBXNativeTarget "BonVoyageWatch Watch App" */;
+			buildPhases = (
+				576AAFAD2C02594500588BB7 /* Sources */,
+				576AAFAE2C02594500588BB7 /* Frameworks */,
+				576AAFAF2C02594500588BB7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BonVoyageWatch Watch App";
+			productName = "BonVoyageWatch Watch App";
+			productReference = 576AAFB12C02594500588BB7 /* BonVoyageWatch Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
 		5778FA022BCD849800CCB87F /* BonVoyage */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5778FA272BCD849900CCB87F /* Build configuration list for PBXNativeTarget "BonVoyage" */;
@@ -206,6 +344,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				576AAFBD2C02594600588BB7 /* PBXTargetDependency */,
 			);
 			name = BonVoyage;
 			packageProductDependencies = (
@@ -221,9 +360,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastSwiftUpdateCheck = 1400;
-				LastUpgradeCheck = 1400;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
 				TargetAttributes = {
+					576AAFB02C02594500588BB7 = {
+						CreatedOnToolsVersion = 15.3;
+					};
 					5778FA022BCD849800CCB87F = {
 						CreatedOnToolsVersion = 14.0.1;
 					};
@@ -246,11 +388,21 @@
 			projectRoot = "";
 			targets = (
 				5778FA022BCD849800CCB87F /* BonVoyage */,
+				576AAFB02C02594500588BB7 /* BonVoyageWatch Watch App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		576AAFAF2C02594500588BB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				576AAFBB2C02594600588BB7 /* Preview Assets.xcassets in Resources */,
+				576AAFB82C02594600588BB7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5778FA012BCD849800CCB87F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -263,6 +415,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		576AAFAD2C02594500588BB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				576AAFCB2C025B8300588BB7 /* AnimatedMarker.swift in Sources */,
+				576AAFE62C039DEC00588BB7 /* workoutState.swift in Sources */,
+				576AAFDA2C039AE000588BB7 /* WorkoutView.swift in Sources */,
+				576AAFB62C02594500588BB7 /* ContentView.swift in Sources */,
+				576AAFE02C039CC400588BB7 /* ConnectivityProvider.swift in Sources */,
+				576AAFD62C025F9200588BB7 /* LocationManager.swift in Sources */,
+				576AAFE22C039D7800588BB7 /* LocationModel.swift in Sources */,
+				576AAFCA2C025ACD00588BB7 /* MapView.swift in Sources */,
+				576AAFE42C039D8400588BB7 /* HeartRateModel.swift in Sources */,
+				576AAFDE2C039C7600588BB7 /* WorkoutManager.swift in Sources */,
+				576AAFDC2C039B9200588BB7 /* ViewModel.swift in Sources */,
+				576AAFB42C02594500588BB7 /* BonVoyageWatchApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5778F9FF2BCD849800CCB87F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -281,11 +452,103 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		576AAFBD2C02594600588BB7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 576AAFB02C02594500588BB7 /* BonVoyageWatch Watch App */;
+			targetProxy = 576AAFBC2C02594600588BB7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		576AAFC02C02594600588BB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_ENTITLEMENTS = "BonVoyageWatch Watch App/BonVoyageWatch Watch App.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BonVoyageWatch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = Q3WX6797WM;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "BonVoyageWatch-Watch-App-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = BonVoyageWatch;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Tus datos de salud sirven para monitorizar tu estado y ofrecerte una conducción segura.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Tus datos de salud sirven para monitorizar tu estado y ofrecerte una conducción segura.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Tu ubicación sirve para mostrar tu posición en el mapa, obtener indicaciones, estimar los tiempos de viaje y mejorar los resultados de búsqueda.";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = Christian.BonVoyage;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Christian.BonVoyage.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		576AAFC12C02594600588BB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_ENTITLEMENTS = "BonVoyageWatch Watch App/BonVoyageWatch Watch App.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BonVoyageWatch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = Q3WX6797WM;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "BonVoyageWatch-Watch-App-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = BonVoyageWatch;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Tus datos de salud sirven para monitorizar tu estado y ofrecerte una conducción segura.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Tus datos de salud sirven para monitorizar tu estado y ofrecerte una conducción segura.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Tu ubicación sirve para mostrar tu posición en el mapa, obtener indicaciones, estimar los tiempos de viaje y mejorar los resultados de búsqueda.";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = Christian.BonVoyage;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Christian.BonVoyage.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
 		5778FA252BCD849900CCB87F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -347,6 +610,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -401,6 +665,7 @@
 		5778FA282BCD849900CCB87F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = BonVoyage/BonVoyage.entitlements;
@@ -412,6 +677,9 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BonVoyage/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.navigation";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Tus datos de salud sirven para monitorizar tu estado y ofrecerte una conducción segura.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Tus datos de salud sirven para monitorizar tu estado y ofrecerte una conducción segura.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Tu ubicación sirve para mostrar tu posición en el mapa, obtener indicaciones, estimar los tiempos de viaje y mejorar los resultados de búsqueda.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -434,6 +702,7 @@
 		5778FA292BCD849900CCB87F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = BonVoyage/BonVoyage.entitlements;
@@ -445,6 +714,9 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BonVoyage/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.navigation";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Tus datos de salud sirven para monitorizar tu estado y ofrecerte una conducción segura.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Tus datos de salud sirven para monitorizar tu estado y ofrecerte una conducción segura.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Tu ubicación sirve para mostrar tu posición en el mapa, obtener indicaciones, estimar los tiempos de viaje y mejorar los resultados de búsqueda.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -467,6 +739,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		576AAFBF2C02594600588BB7 /* Build configuration list for PBXNativeTarget "BonVoyageWatch Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				576AAFC02C02594600588BB7 /* Debug */,
+				576AAFC12C02594600588BB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		5778F9FE2BCD849800CCB87F /* Build configuration list for PBXProject "BonVoyage" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
