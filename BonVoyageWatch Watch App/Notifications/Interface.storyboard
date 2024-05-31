@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="32700.99.1234" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="watch38"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="22609"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="fRD-1l-P1O">
+            <objects>
+                <controller id="IGi-cB-aGO"/>
+            </objects>
+            <point key="canvasLocation" x="-17" y="-523"/>
+        </scene>
+        <!--User Notification Interface Controller-->
+        <scene sceneID="xyC-Vx-KYg">
+            <objects>
+                <controller id="EnI-um-wCz" customClass="WKUserNotificationInterfaceController" customModule="BonVoyageWatch_Watch_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="-17" y="-40"/>
+        </scene>
+        <!--User Notification Interface Controller-->
+        <scene sceneID="5Wo-F0-Owv">
+            <objects>
+                <controller id="4DI-2I-nTb" customClass="WKUserNotificationInterfaceController"/>
+            </objects>
+            <point key="canvasLocation" x="379" y="-40"/>
+        </scene>
+    </scenes>
+</document>

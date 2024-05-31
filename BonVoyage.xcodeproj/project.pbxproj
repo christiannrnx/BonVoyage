@@ -33,6 +33,9 @@
 		576AAFE92C03A35600588BB7 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 576AAFE82C03A35600588BB7 /* WatchConnectivity.framework */; };
 		576AAFEB2C03A36D00588BB7 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 576AAFEA2C03A36C00588BB7 /* HealthKit.framework */; };
 		576AAFED2C03A37800588BB7 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 576AAFEC2C03A37800588BB7 /* WatchConnectivity.framework */; };
+		576AAFFD2C0A4E1800588BB7 /* PushNotificationPayload.apns in Resources */ = {isa = PBXBuildFile; fileRef = 576AAFFC2C0A4E1800588BB7 /* PushNotificationPayload.apns */; };
+		576AAFFF2C0A4E6000588BB7 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576AAFFE2C0A4E6000588BB7 /* NotificationView.swift */; };
+		576AB0012C0A53C800588BB7 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 576AB0002C0A53C800588BB7 /* Interface.storyboard */; };
 		5778FA072BCD849800CCB87F /* BonVoyageApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5778FA062BCD849800CCB87F /* BonVoyageApp.swift */; };
 		5778FA092BCD849800CCB87F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5778FA082BCD849800CCB87F /* ContentView.swift */; };
 		5778FA0B2BCD849800CCB87F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5778FA0A2BCD849800CCB87F /* Assets.xcassets */; };
@@ -93,6 +96,9 @@
 		576AAFEC2C03A37800588BB7 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS10.4.sdk/System/Library/Frameworks/WatchConnectivity.framework; sourceTree = DEVELOPER_DIR; };
 		576AAFF92C04DB3F00588BB7 /* BonVoyageWatch Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "BonVoyageWatch Watch App.entitlements"; sourceTree = "<group>"; };
 		576AAFFA2C06045200588BB7 /* BonVoyageWatch-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "BonVoyageWatch-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
+		576AAFFC2C0A4E1800588BB7 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		576AAFFE2C0A4E6000588BB7 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		576AB0002C0A53C800588BB7 /* Interface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Interface.storyboard; sourceTree = "<group>"; };
 		5778FA032BCD849800CCB87F /* BonVoyage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BonVoyage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5778FA062BCD849800CCB87F /* BonVoyageApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonVoyageApp.swift; sourceTree = "<group>"; };
 		5778FA082BCD849800CCB87F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -211,6 +217,7 @@
 				576AAFF92C04DB3F00588BB7 /* BonVoyageWatch Watch App.entitlements */,
 				576AAFD42C025F7800588BB7 /* Controller */,
 				576AAFCF2C025D0A00588BB7 /* Model */,
+				576AB0022C0A53CE00588BB7 /* Notifications */,
 				576AAFC82C025AB700588BB7 /* Views */,
 				576AAFB32C02594500588BB7 /* BonVoyageWatchApp.swift */,
 				576AAFB52C02594500588BB7 /* ContentView.swift */,
@@ -256,6 +263,16 @@
 				576AAFDF2C039CC400588BB7 /* ConnectivityProvider.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		576AB0022C0A53CE00588BB7 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				576AAFFC2C0A4E1800588BB7 /* PushNotificationPayload.apns */,
+				576AAFFE2C0A4E6000588BB7 /* NotificationView.swift */,
+				576AB0002C0A53C800588BB7 /* Interface.storyboard */,
+			);
+			path = Notifications;
 			sourceTree = "<group>";
 		};
 		5778F9FA2BCD849800CCB87F = {
@@ -398,8 +415,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				576AB0012C0A53C800588BB7 /* Interface.storyboard in Resources */,
 				576AAFBB2C02594600588BB7 /* Preview Assets.xcassets in Resources */,
 				576AAFB82C02594600588BB7 /* Assets.xcassets in Resources */,
+				576AAFFD2C0A4E1800588BB7 /* PushNotificationPayload.apns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +441,7 @@
 				576AAFCB2C025B8300588BB7 /* AnimatedMarker.swift in Sources */,
 				576AAFE62C039DEC00588BB7 /* workoutState.swift in Sources */,
 				576AAFDA2C039AE000588BB7 /* WorkoutView.swift in Sources */,
+				576AAFFF2C0A4E6000588BB7 /* NotificationView.swift in Sources */,
 				576AAFB62C02594500588BB7 /* ContentView.swift in Sources */,
 				576AAFE02C039CC400588BB7 /* ConnectivityProvider.swift in Sources */,
 				576AAFD62C025F9200588BB7 /* LocationManager.swift in Sources */,

@@ -8,6 +8,7 @@
 import Foundation
 import CoreLocation
 import Combine
+import UserNotifications
 
 
 public class ViewModel: ObservableObject{
@@ -52,6 +53,7 @@ public class ViewModel: ObservableObject{
     
     
     func startDriveWorkout(){
+        requestNotifications()
         workout = .started
         recordData()
         workoutManager.startWorkout(workoutType: .cycling)
@@ -67,7 +69,7 @@ public class ViewModel: ObservableObject{
                     print("[workout] [locationUpdate] location Exists")
                     let currentDate = Date()
                     let unixTimestamp = String(Int(currentDate.timeIntervalSince1970))
-                    self.coordinatesVector.append( LocationModel(latitude: location.coordinate.latitude.magnitude, longitude: location.coordinate.longitude.magnitude, altitude: location.altitude.magnitude, speed: location.speed.magnitude * 3.6 * 4.0, hearRate: self.workoutManager.heartRate, time: unixTimestamp) )
+                    self.coordinatesVector.append( LocationModel(latitude: location.coordinate.latitude.magnitude, longitude: location.coordinate.longitude.magnitude, altitude: location.altitude.magnitude, speed: location.speed.magnitude * 14.4, hearRate: self.workoutManager.heartRate, time: unixTimestamp) )
                 }else{
                     print("[workout] [locationUpdate] location Failed")
                 }
@@ -100,6 +102,16 @@ public class ViewModel: ObservableObject{
     func resumeWorkout(){
         workout = .started
         workoutManager.resume()
+    }
+    
+    func requestNotifications(){
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.sound,.badge]) { (success,error) in
+            if success {
+                print("Notifications Allowed")
+            } else if let error = error {
+                print(error.localizedDescription)
+            }
+        }
     }
     
 }
