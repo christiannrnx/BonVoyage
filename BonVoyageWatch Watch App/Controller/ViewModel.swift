@@ -35,7 +35,6 @@ public class ViewModel: ObservableObject{
         counter = Int(UserDefaults.standard.string(forKey: "counter") ?? "0") ?? 0
         print("[workout] COUNTER: ", counter)
         workoutManager.requestAuthorization()
-        
     }
     
     @Published var workout: workoutState = .finished

@@ -20,21 +20,21 @@ struct ContentView: View {
                 .edgesIgnoringSafeArea(.all) // Asegura que el mapa ocupe toda la pantalla
             
         }
-        .overlay(alignment: .bottom){
+        .overlay(alignment: .center){
             // Contenido principal
             VStack(alignment: .center) {
-                Button("Notificción") {
+                Button("Notificación") {
                     let content = UNMutableNotificationContent()
                     content.title = "Alerta de estrés!"
                     content.subtitle = "Deberías parar a descansar"
                     content.sound = .defaultCritical
-                    content.categoryIdentifier = "myCategory"
+                    content.categoryIdentifier = "stressAlert"
                     
                     let action = UNNotificationAction(identifier: "done", title: "Done", options: .foreground)
-                    let category = UNNotificationCategory(identifier: "myCategory", actions: [action], intentIdentifiers: [], options: [])
+                    let category = UNNotificationCategory(identifier: "stressAlert", actions: [action], intentIdentifiers: [], options: [])
                     
                     UNUserNotificationCenter.current().setNotificationCategories([category])
-                    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
+                    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
                     let request = UNNotificationRequest(identifier: "heart", content: content, trigger: trigger)
                     UNUserNotificationCenter.current().add(request) { error in
                         if let error = error {

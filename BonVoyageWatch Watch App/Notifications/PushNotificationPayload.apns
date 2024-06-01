@@ -2,17 +2,17 @@
     "aps": {
         "alert": {
             "body": "Test message",
-            "title": "Optional title",
-            "subtitle": "Optional subtitle"
+            "title": "Alerta de estrés!",
+            "subtitle": "Deberías parar a descansar"
         },
-        "category": "myCategory",
+        "category": "stressAlert",
         "thread-id": "5280"
     },
     
     "WatchKit Simulator Actions": [
         {
             "title": "First Button",
-            "identifier": "firstButtonAction"
+            "identifier": "heart"
         }
     ],
     

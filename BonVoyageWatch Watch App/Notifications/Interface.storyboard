@@ -15,7 +15,7 @@
         <!--User Notification Interface Controller-->
         <scene sceneID="xyC-Vx-KYg">
             <objects>
-                <controller id="EnI-um-wCz" customClass="WKUserNotificationInterfaceController" customModule="BonVoyageWatch_Watch_App" customModuleProvider="target"/>
+                <controller id="EnI-um-wCz" customClass="WKUserNotificationInterfaceController" customModule="BonVoyageWatch_Watch_App"/>
             </objects>
             <point key="canvasLocation" x="-17" y="-40"/>
         </scene>

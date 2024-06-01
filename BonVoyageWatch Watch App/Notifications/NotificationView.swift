@@ -18,7 +18,7 @@ struct NotificationView: View {
     var body: some View {
         
         VStack{
-            Text("Drink some milk!")
+            Text("Alerta de estrés!")
                     .font(.subheadline)
             ZStack{
                 
@@ -29,7 +29,7 @@ struct NotificationView: View {
                 // Progress Circle
                 Circle()
                     .trim(from: ringAnimation, to: 1.0)
-                    .stroke(LinearGradient(gradient: Gradient(colors: [Color( #colorLiteral(red: 0.8103025556, green: 0, blue: 0, alpha: 1)), Color( #colorLiteral(red: 0.3331906199, green: 0, blue: 0.5599521995, alpha: 1))]), startPoint: .topTrailing, endPoint: .bottomLeading), style: StrokeStyle(lineWidth: 15, lineCap: .round))
+                    .stroke(LinearGradient(gradient: Gradient(colors: [Color( #colorLiteral(red: 1, green: 0, blue: 0, alpha: 1)), Color( #colorLiteral(red: 1, green: 0.9001697898, blue: 0, alpha: 1))]), startPoint: .topTrailing, endPoint: .bottomLeading), style: StrokeStyle(lineWidth: 15, lineCap: .round))
                     .rotationEffect(Angle(degrees: 90))
                     .rotation3DEffect(Angle(degrees: 180), axis: (x: 1, y: 0, z: 0))
                     .shadow(color: Color(#colorLiteral(red: 0.2666666667, green: 0.8431372549, blue: 0.7137254902, alpha: 1)).opacity(0.3), radius: 3, x: 0, y: 3)
@@ -63,4 +63,10 @@ struct NotificationView: View {
         }
     
     
+}
+
+struct NotificationView_Previews: PreviewProvider {
+    static var previews: some View {
+        NotificationView()
+    }
 }
