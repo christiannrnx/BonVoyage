@@ -42,6 +42,7 @@
 		5778FA0B2BCD849800CCB87F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5778FA0A2BCD849800CCB87F /* Assets.xcassets */; };
 		5778FA0E2BCD849800CCB87F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5778FA0D2BCD849800CCB87F /* Preview Assets.xcassets */; };
 		5778FA362BCD8DD900CCB87F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5778FA352BCD8DD900CCB87F /* MapKit.framework */; };
+		57D4C6082C0E4D0D0047AB95 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D4C6072C0E4D0D0047AB95 /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +110,7 @@
 		5778FA302BCD883400CCB87F /* BonVoyage.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BonVoyage.entitlements; sourceTree = "<group>"; };
 		5778FA312BCD883900CCB87F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		5778FA352BCD8DD900CCB87F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		57D4C6072C0E4D0D0047AB95 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 		5725CF6A2BDB00F000AB5589 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				57D4C6062C0E4CC60047AB95 /* ProfileView */,
 				573AC1C72BDB6E2B00D32220 /* Components */,
 				5725CF6E2BDB015400AB5589 /* MapView */,
 				5725CF6B2BDB00FF00AB5589 /* HomeView */,
@@ -332,6 +335,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		57D4C6062C0E4CC60047AB95 /* ProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				57D4C6072C0E4D0D0047AB95 /* ProfileView.swift */,
+			);
+			path = ProfileView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -464,6 +475,7 @@
 			files = (
 				573AC1CB2BDB7FDE00D32220 /* AnimatedMarker.swift in Sources */,
 				5725CF692BDAE18B00AB5589 /* LocationManager.swift in Sources */,
+				57D4C6082C0E4D0D0047AB95 /* ProfileView.swift in Sources */,
 				5725CF722BDB019B00AB5589 /* MapView.swift in Sources */,
 				5778FA092BCD849800CCB87F /* ContentView.swift in Sources */,
 				5725CF742BDB01A900AB5589 /* MapViewModel.swift in Sources */,
