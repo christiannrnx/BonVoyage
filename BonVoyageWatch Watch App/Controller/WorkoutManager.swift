@@ -1,5 +1,5 @@
 //
-//  RouteManager.swift
+//  WorkoutManager.swift
 //  BonVoyageWatch Watch App
 //
 //  Created by Christian Romero

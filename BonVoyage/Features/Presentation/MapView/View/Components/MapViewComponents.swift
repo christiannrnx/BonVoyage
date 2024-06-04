@@ -40,11 +40,11 @@ extension MapView {
                     }
             }
             
-            // User Profile
-            IconView(systemName: "person.crop.circle.fill")
-                .onTapGesture {
-                    self.viewModel.mapStyle = viewModel.mapStyle.toogle()
-                }
+            NavigationLink(destination: ProfileView()){
+                // User Profile
+                IconView(systemName: "person.crop.circle.fill")
+            }
+               
         }
     }
 }

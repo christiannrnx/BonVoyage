@@ -17,19 +17,6 @@ struct ProfileView: View {
             ScrollView {
                 
                 VStack {
-                    Button {
-                        
-                    } label: {
-                        Image(systemName: "xmark.circle.fill")
-                            .resizable()
-                            .frame(width: 24, height: 24)
-                            .foregroundStyle(.gray, Color(.systemGray6))
-                    }
-                    .padding(.leading, 30)
-                }
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
-                
-                VStack {
                     
                     Image(systemName: "heart.circle.fill")
                         .resizable()
