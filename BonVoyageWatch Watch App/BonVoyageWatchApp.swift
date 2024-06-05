@@ -22,6 +22,7 @@ struct BonVoyageWatch_Watch_AppApp: App {
                 }
             }.environmentObject(viewModel)
         }
+        WKNotificationScene(controller: NotificationController.self, category: "stressAlert")
     }
 }
 

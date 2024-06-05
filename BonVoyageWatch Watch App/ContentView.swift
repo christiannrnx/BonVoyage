@@ -27,14 +27,14 @@ struct ContentView: View {
                     let content = UNMutableNotificationContent()
                     content.title = "Alerta de estrés!"
                     content.subtitle = "Deberías parar a descansar"
-                    content.sound = .defaultCritical
+                    content.sound = .default
                     content.categoryIdentifier = "stressAlert"
                     
                     let action = UNNotificationAction(identifier: "done", title: "Done", options: .foreground)
                     let category = UNNotificationCategory(identifier: "stressAlert", actions: [action], intentIdentifiers: [], options: [])
                     
                     UNUserNotificationCenter.current().setNotificationCategories([category])
-                    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+                    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 3, repeats: false)
                     let request = UNNotificationRequest(identifier: "heart", content: content, trigger: trigger)
                     UNUserNotificationCenter.current().add(request) { error in
                         if let error = error {

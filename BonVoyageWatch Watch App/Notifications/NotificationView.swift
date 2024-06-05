@@ -18,7 +18,7 @@ struct NotificationView: View {
     var body: some View {
         
         VStack{
-            Text("Alerta de estrés!")
+            Text("Deberías parar a descansar")
                     .font(.subheadline)
             ZStack{
                 

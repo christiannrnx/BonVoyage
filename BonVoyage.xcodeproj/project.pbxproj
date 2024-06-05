@@ -35,7 +35,6 @@
 		576AAFED2C03A37800588BB7 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 576AAFEC2C03A37800588BB7 /* WatchConnectivity.framework */; };
 		576AAFFD2C0A4E1800588BB7 /* PushNotificationPayload.apns in Resources */ = {isa = PBXBuildFile; fileRef = 576AAFFC2C0A4E1800588BB7 /* PushNotificationPayload.apns */; };
 		576AAFFF2C0A4E6000588BB7 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576AAFFE2C0A4E6000588BB7 /* NotificationView.swift */; };
-		576AB0012C0A53C800588BB7 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 576AB0002C0A53C800588BB7 /* Interface.storyboard */; };
 		576AB0042C0A58A100588BB7 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576AB0032C0A58A100588BB7 /* NotificationController.swift */; };
 		5778FA072BCD849800CCB87F /* BonVoyageApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5778FA062BCD849800CCB87F /* BonVoyageApp.swift */; };
 		5778FA092BCD849800CCB87F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5778FA082BCD849800CCB87F /* ContentView.swift */; };
@@ -102,7 +101,6 @@
 		576AAFFA2C06045200588BB7 /* BonVoyageWatch-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "BonVoyageWatch-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 		576AAFFC2C0A4E1800588BB7 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		576AAFFE2C0A4E6000588BB7 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
-		576AB0002C0A53C800588BB7 /* Interface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Interface.storyboard; sourceTree = "<group>"; };
 		576AB0032C0A58A100588BB7 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		5778FA032BCD849800CCB87F /* BonVoyage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BonVoyage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5778FA062BCD849800CCB87F /* BonVoyageApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonVoyageApp.swift; sourceTree = "<group>"; };
@@ -281,7 +279,6 @@
 			children = (
 				576AAFFC2C0A4E1800588BB7 /* PushNotificationPayload.apns */,
 				576AAFFE2C0A4E6000588BB7 /* NotificationView.swift */,
-				576AB0002C0A53C800588BB7 /* Interface.storyboard */,
 				576AB0032C0A58A100588BB7 /* NotificationController.swift */,
 			);
 			path = Notifications;
@@ -436,7 +433,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				576AB0012C0A53C800588BB7 /* Interface.storyboard in Resources */,
 				576AAFBB2C02594600588BB7 /* Preview Assets.xcassets in Resources */,
 				576AAFB82C02594600588BB7 /* Assets.xcassets in Resources */,
 				576AAFFD2C0A4E1800588BB7 /* PushNotificationPayload.apns in Resources */,
