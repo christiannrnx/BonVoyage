@@ -11,11 +11,13 @@ import SwiftUI
 struct BonVoyageApp: App {
     
     @StateObject var locationManager = LocationManager()
+    @StateObject var healthManager = HealthManager()
     
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(locationManager)
+                .environmentObject(healthManager)
         }
     }
 }

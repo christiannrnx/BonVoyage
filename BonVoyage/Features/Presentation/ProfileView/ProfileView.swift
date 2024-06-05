@@ -10,6 +10,8 @@ import SwiftUI
 
 struct ProfileView: View {
     
+    @StateObject var healthManager = HealthManager()
+
     var body: some View {
         
         NavigationView {
@@ -26,7 +28,7 @@ struct ProfileView: View {
                         .padding(.top, 10)
                         .foregroundColor(.red)
                     
-                    Text("Nombre Apellidos")
+                    Text("Datos de salud")
                         .font(.title)
                         .fontWeight(.bold)
                         .offset(x:0)
@@ -63,7 +65,7 @@ struct ProfileView: View {
                 .padding(.top, 25)
                     
                 HStack{
-                    Text("69")
+                    Text("\(Int(healthManager.userHeartRate))")
                         .font(.title)
                         .fontWeight(.bold)
                     
@@ -94,7 +96,7 @@ struct ProfileView: View {
                 .padding(.top, 25)
                     
                 HStack{
-                    Text("100")
+                    Text("\(Int(healthManager.userHeartRateVariability))")
                         .font(.title)
                         .fontWeight(.bold)
                     
@@ -125,7 +127,7 @@ struct ProfileView: View {
                 .padding(.top, 25)
                     
                 HStack{
-                    Text("65")
+                    Text("\(Int(healthManager.userRestingHeartRate))")
                         .font(.title)
                         .fontWeight(.bold)
                     

@@ -57,7 +57,7 @@ extension MapView {
         HStack(spacing: -10){
             IconView(systemName: "heart.fill", imageColor: .red)
                 .offset(x:-10)
-            Text("69")
+            Text("\(Int(healthManager.userHeartRate))")
                 .foregroundColor(.init(.gray))
                 .font(.title3)
                 .offset(x:-13)

@@ -11,6 +11,8 @@ import MapKit
 
 struct MapView: View {
     
+    @StateObject var healthManager = HealthManager()
+    
     @Bindable var viewModel: MapViewModel
     @State var showErrorAlert = false
     @State var lookAroundViewIsExpanded: Bool = false

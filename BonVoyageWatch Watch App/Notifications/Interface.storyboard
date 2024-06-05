@@ -5,17 +5,21 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="22609"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--User Notification Interface Controller-->
         <scene sceneID="fRD-1l-P1O">
             <objects>
-                <controller id="IGi-cB-aGO"/>
+                <controller id="IGi-cB-aGO" customClass="WKUserNotificationInterfaceController" customModule="BonVoyageWatch_Watch_App" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="-17" y="-523"/>
         </scene>
         <!--User Notification Interface Controller-->
         <scene sceneID="xyC-Vx-KYg">
             <objects>
-                <controller id="EnI-um-wCz" customClass="WKUserNotificationInterfaceController" customModule="BonVoyageWatch_Watch_App"/>
+                <controller id="EnI-um-wCz" customClass="WKUserNotificationInterfaceController" customModule="BonVoyageWatch_Watch_App">
+                    <connections>
+                        <segue destination="4DI-2I-nTb" kind="relationship" relationship="nextPage" id="MPv-3q-3xA"/>
+                    </connections>
+                </controller>
             </objects>
             <point key="canvasLocation" x="-17" y="-40"/>
         </scene>

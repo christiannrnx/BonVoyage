@@ -39,7 +39,7 @@ enum MyMapStyle: Int {
 
 
 @Observable class MapViewModel {
-    
+        
     // Map attributes
     var cameraPosition: MapCameraPosition
     var location: CLLocation?

@@ -43,7 +43,7 @@
 		5778FA0E2BCD849800CCB87F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5778FA0D2BCD849800CCB87F /* Preview Assets.xcassets */; };
 		5778FA362BCD8DD900CCB87F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5778FA352BCD8DD900CCB87F /* MapKit.framework */; };
 		57D4C6082C0E4D0D0047AB95 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D4C6072C0E4D0D0047AB95 /* ProfileView.swift */; };
-		57D4C60A2C0F216D0047AB95 /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D4C6092C0F216D0047AB95 /* WorkoutManager.swift */; };
+		57D4C60A2C0F216D0047AB95 /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D4C6092C0F216D0047AB95 /* HealthManager.swift */; };
 		57D4C60C2C0F24F70047AB95 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57D4C60B2C0F24F70047AB95 /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -113,7 +113,7 @@
 		5778FA312BCD883900CCB87F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		5778FA352BCD8DD900CCB87F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		57D4C6072C0E4D0D0047AB95 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		57D4C6092C0F216D0047AB95 /* WorkoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
+		57D4C6092C0F216D0047AB95 /* HealthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
 		57D4C60B2C0F24F70047AB95 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -154,7 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				5725CF682BDAE18B00AB5589 /* LocationManager.swift */,
-				57D4C6092C0F216D0047AB95 /* WorkoutManager.swift */,
+				57D4C6092C0F216D0047AB95 /* HealthManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -484,7 +484,7 @@
 				5725CF692BDAE18B00AB5589 /* LocationManager.swift in Sources */,
 				57D4C6082C0E4D0D0047AB95 /* ProfileView.swift in Sources */,
 				5725CF722BDB019B00AB5589 /* MapView.swift in Sources */,
-				57D4C60A2C0F216D0047AB95 /* WorkoutManager.swift in Sources */,
+				57D4C60A2C0F216D0047AB95 /* HealthManager.swift in Sources */,
 				5778FA092BCD849800CCB87F /* ContentView.swift in Sources */,
 				5725CF742BDB01A900AB5589 /* MapViewModel.swift in Sources */,
 				573AC1C62BDB6CEB00D32220 /* MapViewComponents.swift in Sources */,
