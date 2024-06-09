@@ -11,6 +11,8 @@ import SwiftUI
 struct ProfileView: View {
     
     @StateObject var healthManager = HealthManager()
+    @State var firstName: String?
+    @State var lastName: String?
 
     var body: some View {
         
@@ -151,6 +153,6 @@ struct ProfileView: View {
 
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView()
+        ProfileView(firstName: "Christian", lastName: "Romero")
     }
 }

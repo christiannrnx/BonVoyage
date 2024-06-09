@@ -52,7 +52,7 @@ extension MapView {
     @ViewBuilder
     func destinationView() -> some View {
         if viewModel.isLoggedIn {
-            ProfileView()
+            ProfileView(firstName: AuthenticationManager.shared.getFirstName(), lastName: AuthenticationManager.shared.getLastName())
         } else {
             SignInViewControllerRepresentable()
         }

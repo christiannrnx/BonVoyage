@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         let provider = ASAuthorizationAppleIDProvider()
         let request = provider.createRequest()
         // Attributes we want from the user
-        request.requestedScopes = [.fullName, .email]
+        request.requestedScopes = [.fullName]
         
         let controller = ASAuthorizationController(authorizationRequests: [request])
         controller.delegate = self
@@ -52,12 +52,11 @@ extension ViewController: ASAuthorizationControllerDelegate {
         switch authorization.credential {
         // Get user credentials
         case let credentials as ASAuthorizationAppleIDCredential:
-            let firstName = credentials.fullName?.givenName
-            let lastName = credentials.fullName?.familyName
-            let email = credentials.email
+            var firstName = credentials.fullName?.givenName
+            var lastName = credentials.fullName?.familyName
             
             // Update the login state
-            AuthenticationManager.shared.setLoggedIn(true)
+            AuthenticationManager.shared.setLoggedIn(true, firstName: firstName, lastName: lastName)
             // Notify login success
             NotificationCenter.default.post(name: Notification.Name("didLogIn"), object: nil)
             // Dismiss the login view
