@@ -61,11 +61,25 @@ enum MyMapStyle: Int {
     var searchResults: [MKMapItem] = []
     // Place Details Properties
     var showDetails: Bool = false
+    // Login state
+    var isLoggedIn: Bool
     
     init(location: CLLocation?, region: MKCoordinateRegion) {
         self.cameraPosition = .region(region)
         self.location = location
         self.region = region
+        self.isLoggedIn = AuthenticationManager.shared.isLoggedIn()
+        
+        // Observe login changes
+        NotificationCenter.default.addObserver(self, selector: #selector(didLogIn), name: Notification.Name("didLogIn"), object: nil)
+    }
+    
+    @objc func didLogIn() {
+        self.isLoggedIn = AuthenticationManager.shared.isLoggedIn()
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
 }
 

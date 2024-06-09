@@ -44,6 +44,10 @@
 		57D4C6082C0E4D0D0047AB95 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D4C6072C0E4D0D0047AB95 /* ProfileView.swift */; };
 		57D4C60A2C0F216D0047AB95 /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D4C6092C0F216D0047AB95 /* HealthManager.swift */; };
 		57D4C60C2C0F24F70047AB95 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57D4C60B2C0F24F70047AB95 /* HealthKit.framework */; };
+		57D4C60F2C15E0460047AB95 /* NotificationTiredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D4C60E2C15E0460047AB95 /* NotificationTiredView.swift */; };
+		57D4C6112C15E1140047AB95 /* PushNotificationPayloadTired.apns in Resources */ = {isa = PBXBuildFile; fileRef = 57D4C6102C15E1140047AB95 /* PushNotificationPayloadTired.apns */; };
+		57D4C6132C1606EE0047AB95 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D4C6122C1606EE0047AB95 /* ViewController.swift */; };
+		57D4C6152C160CA50047AB95 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D4C6142C160CA50047AB95 /* AuthenticationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +117,10 @@
 		57D4C6072C0E4D0D0047AB95 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		57D4C6092C0F216D0047AB95 /* HealthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
 		57D4C60B2C0F24F70047AB95 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		57D4C60E2C15E0460047AB95 /* NotificationTiredView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTiredView.swift; sourceTree = "<group>"; };
+		57D4C6102C15E1140047AB95 /* PushNotificationPayloadTired.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayloadTired.apns; sourceTree = "<group>"; };
+		57D4C6122C1606EE0047AB95 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		57D4C6142C160CA50047AB95 /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +161,8 @@
 			children = (
 				5725CF682BDAE18B00AB5589 /* LocationManager.swift */,
 				57D4C6092C0F216D0047AB95 /* HealthManager.swift */,
+				57D4C6122C1606EE0047AB95 /* ViewController.swift */,
+				57D4C6142C160CA50047AB95 /* AuthenticationManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -279,7 +289,9 @@
 			children = (
 				576AAFFC2C0A4E1800588BB7 /* PushNotificationPayload.apns */,
 				576AAFFE2C0A4E6000588BB7 /* NotificationView.swift */,
+				57D4C60E2C15E0460047AB95 /* NotificationTiredView.swift */,
 				576AB0032C0A58A100588BB7 /* NotificationController.swift */,
+				57D4C6102C15E1140047AB95 /* PushNotificationPayloadTired.apns */,
 			);
 			path = Notifications;
 			sourceTree = "<group>";
@@ -435,6 +447,7 @@
 			files = (
 				576AAFBB2C02594600588BB7 /* Preview Assets.xcassets in Resources */,
 				576AAFB82C02594600588BB7 /* Assets.xcassets in Resources */,
+				57D4C6112C15E1140047AB95 /* PushNotificationPayloadTired.apns in Resources */,
 				576AAFFD2C0A4E1800588BB7 /* PushNotificationPayload.apns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -455,6 +468,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57D4C60F2C15E0460047AB95 /* NotificationTiredView.swift in Sources */,
 				576AAFCB2C025B8300588BB7 /* AnimatedMarker.swift in Sources */,
 				576AAFE62C039DEC00588BB7 /* workoutState.swift in Sources */,
 				576AAFDA2C039AE000588BB7 /* WorkoutView.swift in Sources */,
@@ -483,8 +497,10 @@
 				57D4C60A2C0F216D0047AB95 /* HealthManager.swift in Sources */,
 				5778FA092BCD849800CCB87F /* ContentView.swift in Sources */,
 				5725CF742BDB01A900AB5589 /* MapViewModel.swift in Sources */,
+				57D4C6152C160CA50047AB95 /* AuthenticationManager.swift in Sources */,
 				573AC1C62BDB6CEB00D32220 /* MapViewComponents.swift in Sources */,
 				573AC1C92BDB6E4600D32220 /* IconView.swift in Sources */,
+				57D4C6132C1606EE0047AB95 /* ViewController.swift in Sources */,
 				5725CF6D2BDB011200AB5589 /* HomeView.swift in Sources */,
 				5778FA072BCD849800CCB87F /* BonVoyageApp.swift in Sources */,
 			);

@@ -1,14 +1,15 @@
 //
-//  NotificationView.swift
+//  NotificationTiredView.swift
 //  BonVoyageWatch Watch App
 //
 //  Created by Christian Romero
 //
 
+
 import Foundation
 import SwiftUI
 
-struct NotificationTiredView: View {
+struct NotificationView: View {
     
     @Environment(\.presentationMode) var presentationMode
     @State private var ringAnimation: CGFloat = 0
@@ -18,7 +19,7 @@ struct NotificationTiredView: View {
     var body: some View {
         
         VStack{
-            Text("Deberías parar a descansar")
+            Text("Deberías parar a despejarte")
                     .font(.subheadline)
             ZStack{
                 
@@ -29,14 +30,14 @@ struct NotificationTiredView: View {
                 // Progress Circle
                 Circle()
                     .trim(from: ringAnimation, to: 1.0)
-                    .stroke(LinearGradient(gradient: Gradient(colors: [Color( #colorLiteral(red: 1, green: 0, blue: 0, alpha: 1)), Color( #colorLiteral(red: 1, green: 0.9001697898, blue: 0, alpha: 1))]), startPoint: .topTrailing, endPoint: .bottomLeading), style: StrokeStyle(lineWidth: 15, lineCap: .round))
+                    .stroke(LinearGradient(gradient: Gradient(colors: [Color( #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1)), Color( #colorLiteral(red: 0.5288470984, green: 0.9600093961, blue: 1, alpha: 1))]), startPoint: .topTrailing, endPoint: .bottomLeading), style: StrokeStyle(lineWidth: 15, lineCap: .round))
                     .rotationEffect(Angle(degrees: 90))
                     .rotation3DEffect(Angle(degrees: 180), axis: (x: 1, y: 0, z: 0))
                     .shadow(color: Color(#colorLiteral(red: 0.2666666667, green: 0.8431372549, blue: 0.7137254902, alpha: 1)).opacity(0.3), radius: 3, x: 0, y: 3)
                     .animation(.easeInOut)
                 
                 // Counter
-                Text("❤️\n\(counter)")
+                Text("💤\n\(counter)")
                     .font(.title3)
                     .multilineTextAlignment(.center)
             }.padding()
@@ -65,7 +66,7 @@ struct NotificationTiredView: View {
     
 }
 
-struct NotificationTiredView_Previews: PreviewProvider {
+struct NotificationView_Previews: PreviewProvider {
     static var previews: some View {
         NotificationView()
     }

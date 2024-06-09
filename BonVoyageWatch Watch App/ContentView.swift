@@ -25,17 +25,17 @@ struct ContentView: View {
             VStack(alignment: .center) {
                 Button("Notificación") {
                     let content = UNMutableNotificationContent()
-                    content.title = "Alerta de estrés!"
-                    content.subtitle = "Deberías parar a descansar"
+                    content.title = "Alerta de cansancio!"
+                    content.subtitle = "Deberías parar a despejarte"
                     content.sound = .default
-                    content.categoryIdentifier = "stressAlert"
+                    content.categoryIdentifier = "tiredAlert"
                     
                     let action = UNNotificationAction(identifier: "done", title: "Done", options: .foreground)
-                    let category = UNNotificationCategory(identifier: "stressAlert", actions: [action], intentIdentifiers: [], options: [])
+                    let category = UNNotificationCategory(identifier: "tiredAlert", actions: [action], intentIdentifiers: [], options: [])
                     
                     UNUserNotificationCenter.current().setNotificationCategories([category])
                     let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 3, repeats: false)
-                    let request = UNNotificationRequest(identifier: "heart", content: content, trigger: trigger)
+                    let request = UNNotificationRequest(identifier: "sleep", content: content, trigger: trigger)
                     UNUserNotificationCenter.current().add(request) { error in
                         if let error = error {
                             print(error.localizedDescription)

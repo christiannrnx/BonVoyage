@@ -40,12 +40,32 @@ extension MapView {
                     }
             }
             
-            NavigationLink(destination: ProfileView()){
+            NavigationLink(destination: destinationView()){
                 // User Profile
                 IconView(systemName: "person.crop.circle.fill")
             }
-               
         }
+        .onReceive(NotificationCenter.default.publisher(for: Notification.Name("didLogIn"))) { _ in
+            self.viewModel.isLoggedIn = AuthenticationManager.shared.isLoggedIn()
+        }
+    }
+    @ViewBuilder
+    func destinationView() -> some View {
+        if viewModel.isLoggedIn {
+            ProfileView()
+        } else {
+            SignInViewControllerRepresentable()
+        }
+    }
+}
+
+// Representable for SignInViewController to use in SwiftUI
+struct SignInViewControllerRepresentable: UIViewControllerRepresentable {
+    func makeUIViewController(context: Context) -> UIViewController {
+        return ViewController()
+    }
+    
+    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
     }
 }
 
