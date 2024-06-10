@@ -2,7 +2,7 @@
 //  workoutState.swift
 //  BonVoyageWatch Watch App
 //
-//  Created by Christian Romero on
+//  Created by Christian Romero
 //
 
 import Foundation

@@ -9,7 +9,7 @@
 import Foundation
 import SwiftUI
 
-struct NotificationView: View {
+struct NotificationTiredView: View {
     
     @Environment(\.presentationMode) var presentationMode
     @State private var ringAnimation: CGFloat = 0
@@ -68,6 +68,6 @@ struct NotificationView: View {
 
 struct NotificationView_Previews: PreviewProvider {
     static var previews: some View {
-        NotificationView()
+        NotificationTiredView()
     }
 }

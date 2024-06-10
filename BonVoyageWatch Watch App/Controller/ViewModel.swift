@@ -30,24 +30,15 @@ public class ViewModel: NSObject, ObservableObject, UNUserNotificationCenterDele
     private var HRstd: Double = 0
     private var RestingHRmean: Double = 0
     private var RestingHRstd: Double = 0
-    
-    
-    // Calculate alert thresholds
-    private var HRVstressThreshold: Double {
-        return HRVmean - (1.5 * HRVstd)
-    }
-    
-    private var HRstressThreshold: Double {
-        return HRmean + (1.5 * HRstd)
-    }
-    
-    private var HRsleepThreshold: Double {
-        return RestingHRmean - (1.5 * RestingHRstd)
-    }
+    private var HRVstressThreshold: Double = 0
+    private var HRstressThreshold: Double = 0
+    private var HRsleepThreshold: Double = 0
     
     // Variables to control the time between notifications
     private var lastNotificationDate: Date?
     private let notificationCooldown: TimeInterval = 300 // 5 minutes
+    
+    private let dispatchGroup = DispatchGroup()
     
     override init(){
         self.locationManager = LocationManager()
@@ -59,7 +50,53 @@ public class ViewModel: NSObject, ObservableObject, UNUserNotificationCenterDele
         super.init()
         workoutManager.requestAuthorization()
         UNUserNotificationCenter.current().delegate = self
+        dispatchGroup.enter()
+        workoutManager.fetchHeartRate {
+            self.HRmean = self.workoutManager.userHeartRate
+            self.dispatchGroup.leave()
+        }
+        
+        dispatchGroup.enter()
+        workoutManager.fetchRestingHeartRate {
+            self.RestingHRmean = self.workoutManager.userRestingHeartRate
+            self.dispatchGroup.leave()
+        }
+        
+        dispatchGroup.enter()
+        workoutManager.fetchHeartRateVariability {
+            self.HRVmean = self.workoutManager.userHeartRateVariability
+            self.dispatchGroup.leave()
+        }
+        
+        dispatchGroup.notify(queue: .main) {
+            self.HRVstd = self.calculateStandardDeviation(values: self.generateSimulatedData(mean: self.HRVmean, count: 10))
+            self.HRstd = self.calculateStandardDeviation(values: self.generateSimulatedData(mean: self.HRmean, count: 10))
+            self.RestingHRstd = self.calculateStandardDeviation(values: self.generateSimulatedData(mean: self.RestingHRmean, count: 10))
+            print("HR mean \(self.HRmean)")
+            print("HRV mean \(self.HRVmean)")
+            print("RestHR mean \(self.RestingHRmean)")
+            print("HR std \(self.HRstd)")
+            print("HRV std \(self.HRVstd)")
+            print("RestHR std \(self.RestingHRstd)")
+            self.HRsleepThreshold = self.calculateHRsleepThreshold(restinghrmean: self.RestingHRmean, restinghrstd: self.RestingHRstd)
+            self.HRstressThreshold = self.calculateHRstressThreshold(hrmean: self.HRmean, hrstd: self.HRstd)
+            self.HRVstressThreshold = self.calculateHRVstressThreshold(hrvmean: self.HRVmean, hrvstd: self.HRVstd)
+        }
     }
+    
+    // Calculate alert thresholds
+    private func calculateHRVstressThreshold(hrvmean: Double, hrvstd: Double) -> Double {
+        return hrvmean - (1.5 * hrvstd)
+    }
+    
+    private func calculateHRstressThreshold(hrmean: Double, hrstd: Double) -> Double {
+        return hrmean + (5.0 * hrstd)
+    }
+    
+    private func calculateHRsleepThreshold(restinghrmean: Double, restinghrstd: Double) -> Double {
+        return restinghrmean - (1.5 * restinghrstd)
+    }
+    
     
     @Published var workout: workoutState = .finished
     var coordinatesVector: [LocationModel] = []
@@ -100,7 +137,9 @@ public class ViewModel: NSObject, ObservableObject, UNUserNotificationCenterDele
                 let currentDate = Date()
                 let unixTimestamp = String(Int(currentDate.timeIntervalSince1970))
                 self.heartRateVector.append(HeartRateModel(hearRate: heartRate, time: unixTimestamp))
-                self.checkHeartRateThresholds(heartRate: heartRate)
+                if heartRate != 0 {
+                    self.checkHeartRateThresholds(heartRate: heartRate)
+                }
             }
         }
         self.HRmean = self.workoutManager.averageHeartRate
@@ -197,6 +236,23 @@ public class ViewModel: NSObject, ObservableObject, UNUserNotificationCenterDele
                 }
             }
         }
+    }
+    
+    // Generate simulated data
+    private func generateSimulatedData(mean: Double, count: Int) -> [Double] {
+        var simulatedData = [Double]()
+        for _ in 0..<count {
+            let randomValue = Double.random(in: (mean - 5)...(mean + 5))
+            simulatedData.append(randomValue)
+        }
+        return simulatedData
+    }
+
+    // Calculate std
+    private func calculateStandardDeviation(values: [Double]) -> Double {
+        let mean = values.reduce(0, +) / Double(values.count)
+        let variance = values.reduce(0) { $0 + pow($1 - mean, 2) } / Double(values.count)
+        return sqrt(variance)
     }
     
 }

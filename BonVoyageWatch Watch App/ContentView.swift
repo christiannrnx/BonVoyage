@@ -21,32 +21,7 @@ struct ContentView: View {
             
         }
         .overlay(alignment: .center){
-            // Contenido principal
-            VStack(alignment: .center) {
-                Button("Notificación") {
-                    let content = UNMutableNotificationContent()
-                    content.title = "Alerta de cansancio!"
-                    content.subtitle = "Deberías parar a despejarte"
-                    content.sound = .default
-                    content.categoryIdentifier = "tiredAlert"
-                    
-                    let action = UNNotificationAction(identifier: "done", title: "Done", options: .foreground)
-                    let category = UNNotificationCategory(identifier: "tiredAlert", actions: [action], intentIdentifiers: [], options: [])
-                    
-                    UNUserNotificationCenter.current().setNotificationCategories([category])
-                    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 3, repeats: false)
-                    let request = UNNotificationRequest(identifier: "sleep", content: content, trigger: trigger)
-                    UNUserNotificationCenter.current().add(request) { error in
-                        if let error = error {
-                            print(error.localizedDescription)
-                        } else{
-                            print("Notification created")
-                        }
-                    }
-                }
-                .buttonStyle(.borderedProminent)
-                .tint(.yellow)
-            }
+    
         }
         .overlay(alignment: .bottom){
             // Contenido principal

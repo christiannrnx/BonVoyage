@@ -85,6 +85,46 @@ public class WorkoutManager: NSObject, ObservableObject {
             // Handle error.
         }
     }
+    
+    @Published var userHeartRate: Double = 0
+    @Published var userRestingHeartRate: Double = 0
+    @Published var userHeartRateVariability: Double = 0
+    
+    func fetchHeartRate(completion: @escaping () -> Void) {
+        let heartRateType = HKQuantityType.quantityType(forIdentifier: .heartRate)!
+        let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierEndDate, ascending: false)
+        let query = HKSampleQuery(sampleType: heartRateType, predicate: nil, limit: 1, sortDescriptors: [sortDescriptor]) { query, samples, error in
+            if let samples = samples, let sample = samples.first as? HKQuantitySample {
+                self.userHeartRate = sample.quantity.doubleValue(for: HKUnit(from: "count/min"))
+            }
+            completion()
+        }
+        healthStore.execute(query)
+    }
+    
+    func fetchRestingHeartRate(completion: @escaping () -> Void) {
+        let restingHeartRateType = HKQuantityType.quantityType(forIdentifier: .restingHeartRate)!
+        let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierEndDate, ascending: false)
+        let query = HKSampleQuery(sampleType: restingHeartRateType, predicate: nil, limit: 1, sortDescriptors: [sortDescriptor]) { query, samples, error in
+            if let samples = samples, let sample = samples.first as? HKQuantitySample {
+                self.userRestingHeartRate = sample.quantity.doubleValue(for: HKUnit(from: "count/min"))
+            }
+            completion()
+        }
+        healthStore.execute(query)
+    }
+    
+    func fetchHeartRateVariability(completion: @escaping () -> Void) {
+        let heartRateVariabilityType = HKQuantityType.quantityType(forIdentifier: .heartRateVariabilitySDNN)!
+        let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierEndDate, ascending: false)
+        let query = HKSampleQuery(sampleType: heartRateVariabilityType, predicate: nil, limit: 1, sortDescriptors: [sortDescriptor]) { query, samples, error in
+            if let samples = samples, let sample = samples.first as? HKQuantitySample {
+                self.userHeartRateVariability = sample.quantity.doubleValue(for: HKUnit.secondUnit(with: .milli))
+            }
+            completion()
+        }
+        healthStore.execute(query)
+    }
 
     // MARK: - Session State Control
 
